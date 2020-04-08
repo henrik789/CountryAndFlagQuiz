@@ -148,7 +148,7 @@ class SecondViewController: UIViewController {
                     
                     UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
                         button.backgroundColor = .greenOne
-                        button.setTitleColor(.myWhite2, for: .normal)
+                        button.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
                     })  { _ in
                         self.points = self.points + 1
                         self.pointsLabel.text = "Points: \(self.points)"
@@ -156,51 +156,51 @@ class SecondViewController: UIViewController {
                         if self.flagCounter != self.flagLimit {
                             self.newFlag((Any).self)
                         }
-                        button.backgroundColor = .myWhite2
-                        button.setTitleColor(.black, for: .normal)
+                        button.backgroundColor = UIColor(named: "ButtonTint")
+                        button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     }
                 }else {
                     UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
                         button.backgroundColor = .redOne
-                        button.setTitleColor(.myWhite2, for: .normal)
+                        button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     })  { _ in
-                        button.backgroundColor = .myWhite2
-                        button.setTitleColor(.black, for: .normal)
+                        button.backgroundColor = UIColor(named: "ButtonTint")
+                        button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         if self.randomNumber == 1 {
                             UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
                                 self.landOne.backgroundColor = .greenOne
-                                self.landOne.setTitleColor(.myWhite2, for: .normal)
+                                self.landOne.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             })  { _ in
                                 self.newFlag((Any).self)
-                                self.landOne.backgroundColor = .myWhite2
-                                self.landOne.setTitleColor(.black, for: .normal)
+                                self.landOne.backgroundColor = UIColor(named: "ButtonTint")
+                                self.landOne.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             }
                         } else if self.randomNumber == 2 {
                             UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
                                 self.landTwo.backgroundColor = .greenOne
-                                self.landTwo.setTitleColor(.myWhite2, for: .normal)
+                                self.landTwo.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             })  { _ in
                                 self.newFlag((Any).self)
-                                self.landTwo.backgroundColor = UIColor.myWhite2
-                                self.landTwo.setTitleColor(.black, for: .normal)
+                                self.landTwo.backgroundColor = UIColor(named: "ButtonTint")
+                                self.landTwo.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             }
                         }else if self.randomNumber == 3 {
                             UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
                                 self.landThre.backgroundColor = .greenOne
-                                self.landThre.setTitleColor(.myWhite2, for: .normal)
+                                self.landThre.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             })  { _ in
                                 self.newFlag((Any).self)
-                                self.landThre.backgroundColor = .myWhite2
-                                self.landThre.setTitleColor(.black, for: .normal)
+                                self.landThre.backgroundColor = UIColor(named: "ButtonTint")
+                                self.landThre.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             }
                         } else if self.randomNumber == 4 {
                             UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
                                 self.landFour.backgroundColor = .greenOne
-                                self.landFour.setTitleColor(.myWhite2, for: .normal)
+                                self.landFour.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             })  { _ in
                                 self.newFlag((Any).self)
-                                self.landFour.backgroundColor = .myWhite2
-                                self.landFour.setTitleColor(.black, for: .normal)
+                                self.landFour.backgroundColor = UIColor(named: "ButtonTint")
+                                self.landFour.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                             }
                         }
                     }
