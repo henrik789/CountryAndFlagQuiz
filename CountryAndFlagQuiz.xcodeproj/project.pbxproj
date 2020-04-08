@@ -14,6 +14,17 @@
 		AF0891D1242F4A3000318B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0891CF242F4A3000318B9A /* Main.storyboard */; };
 		AF0891D3242F4A3100318B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0891D2242F4A3100318B9A /* Assets.xcassets */; };
 		AF0891D6242F4A3100318B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0891D4242F4A3100318B9A /* LaunchScreen.storyboard */; };
+		AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264087243093F60031F1AC /* ThirdViewController.swift */; };
+		AF26408A243094040031F1AC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264089243094040031F1AC /* FourthViewController.swift */; };
+		AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD59243E095400168AF2 /* countriesDict.json */; };
+		AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5B243E0B6700168AF2 /* Country.swift */; };
+		AFE1BD5E243E0B6D00168AF2 /* GetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */; };
+		AFE1BD60243E0B7600168AF2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5F243E0B7600168AF2 /* SwiftyJSON.swift */; };
+		AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD62243E0BC200168AF2 /* Formatter.swift */; };
+		AFE1BD65243E0BC800168AF2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD64243E0BC800168AF2 /* UIButton.swift */; };
+		AFE1BD69243E0BD400168AF2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD68243E0BD400168AF2 /* UILabel.swift */; };
+		AFE1BD6F243E0D5700168AF2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD6E243E0D5700168AF2 /* UIColor.swift */; };
+		AFE1BD71243E0F2B00168AF2 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD70243E0F2A00168AF2 /* Countries */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		AF0891D2242F4A3100318B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0891D5242F4A3100318B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0891D7242F4A3100318B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF264087243093F60031F1AC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		AF264089243094040031F1AC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		AFE1BD59243E095400168AF2 /* countriesDict.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countriesDict.json; sourceTree = "<group>"; };
+		AFE1BD5B243E0B6700168AF2 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFlags.swift; sourceTree = "<group>"; };
+		AFE1BD5F243E0B7600168AF2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		AFE1BD62243E0BC200168AF2 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		AFE1BD64243E0BC800168AF2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		AFE1BD68243E0BD400168AF2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		AFE1BD6E243E0D5700168AF2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AFE1BD70243E0F2A00168AF2 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +80,83 @@
 		AF0891C6242F4A3000318B9A /* CountryAndFlagQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				AFE1BD61243E0BA900168AF2 /* Helpers */,
+				AFE1BD70243E0F2A00168AF2 /* Countries */,
+				AF612DDB243E08A200686642 /* Data */,
 				AF0891C7242F4A3000318B9A /* AppDelegate.swift */,
 				AF0891C9242F4A3000318B9A /* SceneDelegate.swift */,
-				AF0891CB242F4A3000318B9A /* FirstViewController.swift */,
-				AF0891CD242F4A3000318B9A /* SecondViewController.swift */,
+				AF17057C243E085A00D0F174 /* ViewControllers */,
 				AF0891CF242F4A3000318B9A /* Main.storyboard */,
 				AF0891D2242F4A3100318B9A /* Assets.xcassets */,
 				AF0891D4242F4A3100318B9A /* LaunchScreen.storyboard */,
 				AF0891D7242F4A3100318B9A /* Info.plist */,
 			);
 			path = CountryAndFlagQuiz;
+			sourceTree = "<group>";
+		};
+		AF17057C243E085A00D0F174 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFE1BD6A243E0BF600168AF2 /* StartVC */,
+				AFE1BD6B243E0C1500168AF2 /* QuizVC */,
+				AFE1BD6C243E0C2900168AF2 /* TimeQuizVC */,
+				AFE1BD6D243E0C3900168AF2 /* CountriesVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AF612DDB243E08A200686642 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFE1BD5F243E0B7600168AF2 /* SwiftyJSON.swift */,
+				AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */,
+				AFE1BD5B243E0B6700168AF2 /* Country.swift */,
+				AFE1BD59243E095400168AF2 /* countriesDict.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AFE1BD61243E0BA900168AF2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AFE1BD64243E0BC800168AF2 /* UIButton.swift */,
+				AFE1BD68243E0BD400168AF2 /* UILabel.swift */,
+				AFE1BD6E243E0D5700168AF2 /* UIColor.swift */,
+				AFE1BD62243E0BC200168AF2 /* Formatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AFE1BD6A243E0BF600168AF2 /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				AF0891CB242F4A3000318B9A /* FirstViewController.swift */,
+			);
+			path = StartVC;
+			sourceTree = "<group>";
+		};
+		AFE1BD6B243E0C1500168AF2 /* QuizVC */ = {
+			isa = PBXGroup;
+			children = (
+				AF0891CD242F4A3000318B9A /* SecondViewController.swift */,
+			);
+			path = QuizVC;
+			sourceTree = "<group>";
+		};
+		AFE1BD6C243E0C2900168AF2 /* TimeQuizVC */ = {
+			isa = PBXGroup;
+			children = (
+				AF264087243093F60031F1AC /* ThirdViewController.swift */,
+			);
+			path = TimeQuizVC;
+			sourceTree = "<group>";
+		};
+		AFE1BD6D243E0C3900168AF2 /* CountriesVC */ = {
+			isa = PBXGroup;
+			children = (
+				AF264089243094040031F1AC /* FourthViewController.swift */,
+			);
+			path = CountriesVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +217,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE1BD71243E0F2B00168AF2 /* Countries in Resources */,
 				AF0891D6242F4A3100318B9A /* LaunchScreen.storyboard in Resources */,
 				AF0891D3242F4A3100318B9A /* Assets.xcassets in Resources */,
+				AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */,
 				AF0891D1242F4A3000318B9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +232,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */,
+				AFE1BD69243E0BD400168AF2 /* UILabel.swift in Sources */,
+				AF26408A243094040031F1AC /* FourthViewController.swift in Sources */,
+				AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */,
 				AF0891CE242F4A3000318B9A /* SecondViewController.swift in Sources */,
 				AF0891CC242F4A3000318B9A /* FirstViewController.swift in Sources */,
+				AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */,
 				AF0891C8242F4A3000318B9A /* AppDelegate.swift in Sources */,
+				AFE1BD60243E0B7600168AF2 /* SwiftyJSON.swift in Sources */,
+				AFE1BD6F243E0D5700168AF2 /* UIColor.swift in Sources */,
+				AFE1BD65243E0BC800168AF2 /* UIButton.swift in Sources */,
+				AFE1BD5E243E0B6D00168AF2 /* GetFlags.swift in Sources */,
 				AF0891CA242F4A3000318B9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +391,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT2ZWB24ZA;
 				INFOPLIST_FILE = CountryAndFlagQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "se.henriklarsson-.CountryAndFlagQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT2ZWB24ZA;
 				INFOPLIST_FILE = CountryAndFlagQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "se.henriklarsson-.CountryAndFlagQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
