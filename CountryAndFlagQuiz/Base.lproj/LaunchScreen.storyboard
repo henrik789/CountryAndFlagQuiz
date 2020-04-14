@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="Greyish"/>
+                        <color key="backgroundColor" name="Whiteish"/>
                         <constraints>
                             <constraint firstItem="sOn-5i-dDx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CeC-3c-0t9"/>
                             <constraint firstItem="sOn-5i-dDx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="D0Z-Tx-jiS"/>
@@ -40,10 +40,10 @@
     </scenes>
     <resources>
         <namedColor name="Blueish">
-            <color red="0.23137254901960785" green="0.30588235294117649" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.29411764705882354" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Greyish">
-            <color red="0.9100000262260437" green="0.87000000476837158" blue="0.79000002145767212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Whiteish">
+            <color red="0.96862745098039216" green="0.95294117647058818" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

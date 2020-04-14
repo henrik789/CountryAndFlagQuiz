@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var labelB: UILabel!
     @IBOutlet weak var sliderA: UISlider!
@@ -21,14 +21,14 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-                sliderA.tintColor = UIColor(named: "Blueish")
-        sliderA.thumbTintColor = .myYellow
-        sliderB.tintColor = UIColor(named: "Blueish")
-        sliderB.thumbTintColor = .myRed
+        sliderA.tintColor = UIColor(named: "ButtonTint")
+        sliderA.thumbTintColor = UIColor(named: "Yellowish")
+        sliderB.tintColor = UIColor(named: "ButtonTint")
+        sliderB.thumbTintColor = UIColor(named: "Yellowish")
         labelB.text = String(sliderA.value)
         labelD.text = String(sliderB.value)
     }
@@ -36,7 +36,7 @@ class FirstViewController: UIViewController {
         let step: Float = 10
         let roundedValue = round(sliderA.value / step) * step
         flagNumber = Int(roundedValue)
-//        save()
+        //        save()
         labelB.text = String(flagNumber)
     }
     
@@ -45,9 +45,9 @@ class FirstViewController: UIViewController {
         let roundedValue = round(sliderB.value / step) * step
         timeNumber = Int(roundedValue)
         labelD.text = String(timeNumber)
-//        save()
+        //        save()
     }
     
-
+    
 }
 

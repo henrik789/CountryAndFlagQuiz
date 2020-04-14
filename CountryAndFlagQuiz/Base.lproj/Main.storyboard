@@ -37,7 +37,7 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Blueish"/>
+                                        <color key="value" name="Beigey"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -49,7 +49,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set number of Countries in Quiz A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-EE-p1p">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="25"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" name="ButtonTint"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -57,15 +57,15 @@
                                                 <rect key="frame" x="0.0" y="30" width="373" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Gss-Tg-9C9">
-                                                        <rect key="frame" x="-2" y="0.0" width="327.5" height="31"/>
-                                                        <color key="tintColor" name="Blueish"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="328" height="31"/>
+                                                        <color key="tintColor" name="ButtonTint"/>
                                                         <connections>
                                                             <action selector="sliderA:" destination="9pv-A4-QxB" eventType="valueChanged" id="1rf-an-mcx"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koe-aH-LVq">
-                                                        <rect key="frame" x="333.5" y="0.0" width="39.5" height="30"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="334" y="0.0" width="39" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                         <color key="textColor" name="ButtonTint"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -88,7 +88,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set time in seconds for Quiz B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm7-5E-SiS">
                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="25"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" name="ButtonTint"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -96,15 +96,15 @@
                                                 <rect key="frame" x="0.0" y="30" width="373" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="10" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="MaY-db-aRB">
-                                                        <rect key="frame" x="-2" y="0.0" width="327.5" height="31"/>
-                                                        <color key="tintColor" name="Blueish"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="328" height="31"/>
+                                                        <color key="tintColor" name="ButtonTint"/>
                                                         <connections>
                                                             <action selector="sliderB:" destination="9pv-A4-QxB" eventType="valueChanged" id="P9Q-A7-cj5"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-xv-CS7">
-                                                        <rect key="frame" x="333.5" y="0.0" width="39.5" height="30"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                        <rect key="frame" x="334" y="0.0" width="39" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                         <color key="textColor" name="ButtonTint"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -229,7 +229,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-5v-YO6">
                                 <rect key="frame" x="16.5" y="545.5" width="381" height="229"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Eh-g9b">
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Eh-g9b">
                                         <rect key="frame" x="0.0" y="0.0" width="381" height="37"/>
                                         <color key="backgroundColor" name="ButtonTint"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
@@ -248,7 +248,7 @@
                                             <action selector="landOne:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="AZ1-zy-Um4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-fp-oEh">
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-fp-oEh">
                                         <rect key="frame" x="0.0" y="64" width="381" height="37"/>
                                         <color key="backgroundColor" name="ButtonTint"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
@@ -259,7 +259,7 @@
                                             <action selector="landTwo:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="nuO-V6-mRn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-MU-PTe">
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-MU-PTe">
                                         <rect key="frame" x="0.0" y="128" width="381" height="37"/>
                                         <color key="backgroundColor" name="ButtonTint"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
@@ -270,7 +270,7 @@
                                             <action selector="landFour:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cBw-xd-0gu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thu-BN-Wqw">
+                                    <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thu-BN-Wqw">
                                         <rect key="frame" x="0.0" y="192" width="381" height="37"/>
                                         <color key="backgroundColor" name="ButtonTint"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
@@ -419,7 +419,7 @@
                         <color key="barTintColor" name="Whiteish"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" name="ButtonTint"/>
+                                <color key="value" name="Blueish"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -440,8 +440,11 @@
         <image name="first" width="30" height="30"/>
         <image name="map-595791_1920" width="1920" height="1481"/>
         <image name="second" width="30" height="30"/>
+        <namedColor name="Beigey">
+            <color red="0.63921568627450975" green="0.50980392156862742" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Blueish">
-            <color red="0.090196078431372548" green="0.41960784313725491" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47450980392156861" green="0.25490196078431371" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ButtonTint">
             <color red="0.18431372549019609" green="0.28235294117647058" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

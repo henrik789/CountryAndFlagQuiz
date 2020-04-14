@@ -1,10 +1,3 @@
-//
-//  UIView.swift
-//  Lifehacks
-//
-//  Created by Matteo Manferdini on 26/01/2018.
-//  Copyright © 2018 Matteo Manferdini. All rights reserved.
-//
 
 import UIKit
 
