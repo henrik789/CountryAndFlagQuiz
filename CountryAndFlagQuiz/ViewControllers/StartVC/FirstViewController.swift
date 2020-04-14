@@ -10,12 +10,44 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var labelB: UILabel!
+    @IBOutlet weak var sliderA: UISlider!
+    @IBOutlet weak var labelD: UILabel!
+    @IBOutlet weak var sliderB: UISlider!
+    var timeNumber = 60
+    var flagNumber = 200
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+                sliderA.tintColor = UIColor(named: "Blueish")
+        sliderA.thumbTintColor = .myYellow
+        sliderB.tintColor = UIColor(named: "Blueish")
+        sliderB.thumbTintColor = .myRed
+        labelB.text = String(sliderA.value)
+        labelD.text = String(sliderB.value)
+    }
+    @IBAction func sliderA(_ sender: Any) {
+        let step: Float = 10
+        let roundedValue = round(sliderA.value / step) * step
+        flagNumber = Int(roundedValue)
+//        save()
+        labelB.text = String(flagNumber)
+    }
+    
+    @IBAction func sliderB(_ sender: Any) {
+        let step: Float = 10
+        let roundedValue = round(sliderB.value / step) * step
+        timeNumber = Int(roundedValue)
+        labelD.text = String(timeNumber)
+//        save()
+    }
+    
 
 }
 

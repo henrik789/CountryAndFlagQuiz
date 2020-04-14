@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
         var randomNumber = 0
         var answer = String()
         var time = 0
-        var progress = Progress(totalUnitCount: 10)
+        var progress = Progress(totalUnitCount: 1)
         var list = [Country]()
         
         @IBOutlet weak var headerView: UIView!
@@ -56,8 +56,7 @@ class SecondViewController: UIViewController {
         @IBOutlet weak var flagImage: UIImageView!
         
         @IBAction func mainBtn(_ sender: Any) {
-            getFlags.buildArray()
-            config()
+            startFresh()
         }
         
         
@@ -75,18 +74,18 @@ class SecondViewController: UIViewController {
         func config() {
 //            guard let user = StorageController.shared.fetchUser() else { return }
 //            flagLimit = user.flagCount
-            view.backgroundColor = .myBeige
+//            view.backgroundColor = .myBeige
             
             progress = Progress(totalUnitCount: Int64(flagLimit))
-            progressView.progressTintColor = .myYellow
-            progressView.trackTintColor = UIColor(named: "Hague")
+            progressView.progressTintColor = UIColor(named: "Blueish")
+            progressView.trackTintColor = UIColor(named: "Whiteish")
             flagLabel.text = "Flags: \(flagCounter)/\(flagLimit)"
-//            landOne.commonStyle()
-//            landTwo.commonStyle()
-//            landThre.commonStyle()
-//            landFour.commonStyle()
-            mainBtn.backgroundColor = .myYellow
-            mainBtn.layer.cornerRadius = mainBtn.bounds.height / 2
+            landOne.commonStyle()
+            landTwo.commonStyle()
+            landThre.commonStyle()
+            landFour.commonStyle()
+            mainBtn.mainStyle()
+ 
             newFlag((Any).self)
             
             //        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
