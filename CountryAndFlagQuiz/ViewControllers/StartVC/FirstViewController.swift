@@ -26,9 +26,9 @@ class FirstViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         sliderA.tintColor = UIColor(named: "ButtonTint")
-        sliderA.thumbTintColor = UIColor(named: "Yellowish")
+        sliderA.thumbTintColor = UIColor(named: "Greyish")
         sliderB.tintColor = UIColor(named: "ButtonTint")
-        sliderB.thumbTintColor = UIColor(named: "Yellowish")
+        sliderB.thumbTintColor = UIColor(named: "Greyish")
         labelB.text = String(sliderA.value)
         labelD.text = String(sliderB.value)
     }
