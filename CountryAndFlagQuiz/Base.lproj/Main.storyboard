@@ -17,30 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe_white" translatesAutoresizingMaskIntoConstraints="NO" id="bLC-Lb-7Tx">
+                                <rect key="frame" x="50" y="0.0" width="314" height="806"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Flag Quiz" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="20.5" y="80" width="373" height="55"/>
+                                <rect key="frame" x="62" y="82" width="290" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="xKb-AM-tJX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" name="Blueish"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-595791_1920" translatesAutoresizingMaskIntoConstraints="NO" id="W6G-cT-Pkv" customClass="RoundImageView" customModule="CountryAndFlagQuiz" customModuleProvider="target">
-                                <rect key="frame" x="97" y="205.5" width="220" height="220"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn countries and geography!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                <rect key="frame" x="20.5" y="145" width="373" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="LrL-Rj-ptq"/>
-                                    <constraint firstAttribute="height" constant="220" id="h4h-J2-JB7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="T8e-HK-l5Y"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="110"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Beigey"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" name="ButtonTint"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="PDk-3S-ZR9">
                                 <rect key="frame" x="20.5" y="618" width="373" height="165"/>
                                 <subviews>
@@ -124,30 +121,23 @@
                                     <constraint firstItem="RIX-y3-GIb" firstAttribute="centerX" secondItem="PDk-3S-ZR9" secondAttribute="centerX" id="Vpq-N2-YPs"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn countries and geography!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="20.5" y="135" width="373" height="30.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30.5" id="eKL-fY-NdY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <color key="textColor" name="ButtonTint"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Whiteish"/>
                         <constraints>
                             <constraint firstItem="PDk-3S-ZR9" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="29w-3m-92C"/>
-                            <constraint firstItem="W6G-cT-Pkv" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="40" id="6vs-D1-YhW"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="38" id="76d-3q-ZI2"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="BxS-qv-Xqf"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" id="HND-WR-vjz"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="LSm-7K-VdH"/>
-                            <constraint firstItem="PDk-3S-ZR9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W6G-cT-Pkv" secondAttribute="bottom" constant="30" id="SVF-e8-Pnh"/>
+                            <constraint firstItem="bLC-Lb-7Tx" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="RsW-bY-erA"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="PDk-3S-ZR9" secondAttribute="bottom" constant="30" id="USQ-hf-ZOo"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="36" id="eAE-bg-9Dp"/>
+                            <constraint firstItem="bLC-Lb-7Tx" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" constant="-50" id="b5g-Oj-Tmt"/>
+                            <constraint firstItem="PDk-3S-ZR9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="20" id="dqA-pW-0hE"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="eva-PL-coU"/>
+                            <constraint firstAttribute="bottom" secondItem="bLC-Lb-7Tx" secondAttribute="bottom" constant="90" id="ggy-IE-gbp"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.7" id="iw8-X2-nuf"/>
+                            <constraint firstItem="bLC-Lb-7Tx" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="kSm-zQ-yYY"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="l79-U1-IqW"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" id="p7J-r7-xkt"/>
                             <constraint firstItem="PDk-3S-ZR9" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="rzW-fb-9Gk"/>
-                            <constraint firstItem="W6G-cT-Pkv" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="tOB-9C-zm2"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="yyx-KK-att"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                         <userDefinedRuntimeAttributes>
@@ -169,7 +159,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Start" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="image" destination="W6G-cT-Pkv" id="rY8-TE-6Yg"/>
                         <outlet property="labelB" destination="Koe-aH-LVq" id="x45-ku-Q1h"/>
                         <outlet property="labelD" destination="bhy-xv-CS7" id="MHg-pS-bMD"/>
                         <outlet property="sliderA" destination="Gss-Tg-9C9" id="FcT-g7-wlA"/>
@@ -231,7 +220,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Eh-g9b">
                                         <rect key="frame" x="0.0" y="0.0" width="381" height="37"/>
-                                        <color key="backgroundColor" name="ButtonTint"/>
+                                        <color key="backgroundColor" name="Beigey"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="ButtonTint"/>
@@ -250,7 +239,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-fp-oEh">
                                         <rect key="frame" x="0.0" y="64" width="381" height="37"/>
-                                        <color key="backgroundColor" name="ButtonTint"/>
+                                        <color key="backgroundColor" name="Beigey"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="ButtonTint"/>
@@ -261,7 +250,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-MU-PTe">
                                         <rect key="frame" x="0.0" y="128" width="381" height="37"/>
-                                        <color key="backgroundColor" name="ButtonTint"/>
+                                        <color key="backgroundColor" name="Beigey"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="ButtonTint"/>
@@ -272,7 +261,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thu-BN-Wqw">
                                         <rect key="frame" x="0.0" y="192" width="381" height="37"/>
-                                        <color key="backgroundColor" name="ButtonTint"/>
+                                        <color key="backgroundColor" name="Beigey"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="ButtonTint"/>
@@ -286,7 +275,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLu-dA-ysu">
                                 <rect key="frame" x="0.0" y="807" width="414" height="2"/>
                             </progressView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="compass-3408928_1920" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-yF-m1b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="map_rose" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-yF-m1b">
                                 <rect key="frame" x="16.5" y="143" width="381" height="370.5"/>
                             </imageView>
                         </subviews>
@@ -403,7 +392,7 @@
                                         <color key="textColor" name="ButtonTint"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-595791_1920" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-1G-JZi">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-1G-JZi">
                                         <rect key="frame" x="0.0" y="140.5" width="373" height="373"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="YyV-1G-JZi" secondAttribute="height" multiplier="1:1" id="duO-A8-NrO"/>
@@ -479,9 +468,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="compass-3408928_1920" width="1920" height="1357"/>
+        <image name="ad" width="580" height="406"/>
         <image name="first" width="30" height="30"/>
-        <image name="map-595791_1920" width="1920" height="1481"/>
+        <image name="globe_white" width="1500" height="1500"/>
+        <image name="map_rose" width="1920" height="1275"/>
         <image name="second" width="30" height="30"/>
         <namedColor name="Beigey">
             <color red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

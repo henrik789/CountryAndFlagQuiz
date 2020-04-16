@@ -10,7 +10,6 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var labelB: UILabel!
     @IBOutlet weak var sliderA: UISlider!
     @IBOutlet weak var labelD: UILabel!
