@@ -32,7 +32,7 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let width = view.frame.size.width - 12
-        let height  = view.frame.size.height / 2
+        let height  = view.frame.size.height / 2.5
         let layout = countryCV.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.itemSize = CGSize(width: width, height: height)
         config()
