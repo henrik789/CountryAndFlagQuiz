@@ -4,7 +4,7 @@ import UIKit
 
 extension UIButton {
     func commonStyle() {
-        backgroundColor = UIColor(named: "Beigey")
+//        backgroundColor = UIColor(named: "Greyish")
 //        layer.borderWidth = 1
 //        layer.borderColor = UIColor.init(named: "Beigey")?.cgColor
         layer.cornerRadius = 8
@@ -18,7 +18,7 @@ extension UIButton {
     }
     
     func mainStyle() {
-        backgroundColor = UIColor(named: "Beigey")
+//        backgroundColor = UIColor(named: "Greyish")
 //        layer.borderWidth = 1
 //        layer.borderColor = UIColor.init(named: "Blueish")?.cgColor
         layer.cornerRadius = 6
