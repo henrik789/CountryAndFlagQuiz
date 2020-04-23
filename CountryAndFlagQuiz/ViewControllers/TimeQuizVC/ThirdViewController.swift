@@ -18,43 +18,50 @@ class ThirdViewController: UIViewController {
     var flagCounter = 0
     var countdownTimer: Timer!
     var totalTime = 10
-    var isPresented = ""
-    
+    var timeFromStart:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        config()
-
+//        config()
     }
     
-    func config() {
-        setupLabelTap()
+    override func viewWillAppear(_ animated: Bool) {
         view.bringSubviewToFront(flagImageView)
         view.backgroundColor = UIColor(named: "Whiteish")
         mainButton.mainStyle()
-        guard let user = StorageController.shared.fetchUser() else { return }
-        timeLabel.text = String(user.timeCount)
-        totalTime = user.timeCount
+        mainButton.setTitle("Start", for: .normal)
         self.title = "Time Challenge"
-        timeLabel.text = "Time: \(timeFormatted(totalTime))"
         labelTop.layer.cornerRadius = 10
         labelTop.layer.masksToBounds = true
+        labelTop.text = "Country 1"
         labelBottom.layer.cornerRadius = 10
         labelBottom.layer.masksToBounds = true
-        countryList = getFlags.readJSONFromFile()
-        points = 0
-        pointsLabel.text = "Points: \(points)"
-        startNewGame()
-        
+        labelBottom.text = "Country 2"
+        flagImageView.image = UIImage(named: "logoShape_Blue.png")
+        setupLabels()
     }
     
-    @IBAction func mainButton(_ sender: Any) {
-        self.viewDidLoad()
+    func setupLabels() {
+        guard let user = StorageController.shared.fetchUser() else { return }
+        totalTime = user.timeCount
+        timeFromStart = user.timeCount
+        timeLabel.text = "Time: \(timeFormatted(totalTime))"
+        pointsLabel.text = "Points: \(points)"
+    }
+    
+    func config() {
+        setupLabels()
+        countryList = getFlags.readJSONFromFile()
+        points = 0
+        flagCounter = 0
+        startNewGame()
+        startTimer()
     }
     
     // Game ******************************************************************************************************
+    
     func startNewGame() {
-        flagCounter = 0
+        setupLabelTap()
         let randomCountry = Int.random(in: 0..<countryList.count)
         
         var fakeCountry = Int.random(in: 0..<countryList.count)
@@ -67,7 +74,7 @@ class ThirdViewController: UIViewController {
         
         flag = flag.replacingOccurrences(of: ".", with: "")
         
-        flagImageView.image = UIImage(named: "\(flag).png") ?? UIImage(named: "globe_white.png")
+        flagImageView.image = UIImage(named: "\(flag).png") ?? UIImage(named: "logoShape_Blue.png")
         if randomCountry % 2 == 0 {
             labelTop.text = "Capital: \(countryList[randomCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[randomCountry].population))"
             labelBottom.text = "Capital: \(countryList[fakeCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[fakeCountry].population))"
@@ -81,7 +88,7 @@ class ThirdViewController: UIViewController {
             countryList.remove(at: randomCountry)
         }
         flagCounter += 1
-        print(randomCountry,  "image: \(flag)")
+        mainButton.setTitle("Restart", for: .normal)
     }
     
     func setupLabelTap() {
@@ -95,9 +102,6 @@ class ThirdViewController: UIViewController {
     }
     
     @objc func leftlabelTapped(_ sender: UITapGestureRecognizer) {
-        if points == 0 {
-            startTimer()
-        }
         if !right {
             points += 1
             pointsLabel.text = "Points: \(points)"
@@ -111,9 +115,6 @@ class ThirdViewController: UIViewController {
     }
     
     @objc func rightabelTapped(_ sender: UITapGestureRecognizer) {
-        if points == 0 {
-            startTimer()
-        }
         if right {
             points += 1
             pointsLabel.text = "Points: \(points)"
@@ -136,7 +137,6 @@ class ThirdViewController: UIViewController {
     
     @objc func updateTime() {
         timeLabel.text = "Time: \(timeFormatted(totalTime))"
-        
         if totalTime != 0 {
             totalTime -= 1
         } else {
@@ -146,49 +146,22 @@ class ThirdViewController: UIViewController {
     
     func endTimer() {
         countdownTimer.invalidate()
-        let alert = UIAlertController(title: "Finished", message: "You have completed all flags. You scored \(points) out of \(flagCounter).", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            switch action.style{
-            case .default:
-                print("default")
-                self.navigationController?.popViewController(animated: true)
-            case .cancel:
-                print("cancel")
-                
-            case .destructive:
-                print("destructive")
-                
-            @unknown default:
-                fatalError()
-            }}))
-        alert.addAction(UIAlertAction(title: "New Game", style: .default, handler: { action in
-            switch action.style{
-            case .default:
-                print("default")
-                self.viewDidLoad()
-            case .cancel:
-                print("cancel")
-                
-            case .destructive:
-                print("destructive")
-                
-            @unknown default:
-                fatalError()
-            }}))
-        self.present(alert, animated: true, completion: nil)
+        mainButton.setTitle("Try Again", for: .normal)
+        labelTop.text = "You scored \(points)/\(flagCounter) points in \(timeFromStart) seconds. \n "
+        
+        labelBottom.isUserInteractionEnabled = false
+        labelTop.isUserInteractionEnabled = false
+        flagImageView.image = UIImage(named: "logoShape_Blue.png")
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        countdownTimer.invalidate()
-//    }
     
     func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
         let minutes: Int = (totalSeconds / 60) % 60
-        //     let hours: Int = totalSeconds / 3600
         return String(format: "%02d:%02d", minutes, seconds)
     }
-    @IBAction func startTimerPressed(_ sender: UIButton) {
+    
+    @IBAction func startGamePressed(_ sender: UIButton) {
         config()
     }
     
