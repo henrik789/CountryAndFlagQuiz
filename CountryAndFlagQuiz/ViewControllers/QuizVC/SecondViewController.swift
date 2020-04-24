@@ -46,7 +46,6 @@ class SecondViewController: UIViewController {
         evaluate(button: buttonFour as! UIButton)
     }
     @IBAction func newFlag(_ sender: Any) {
-        print(flagCounter, points)
         givenLand = getFlags.buildFlagArray()
         flagCounter += 1
         flagImage.image = UIImage(named: givenLand + ".png")
@@ -64,10 +63,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         getFlags.buildArray()
         config()
-        //        list = getFlags.readJSONFromFile()
-        //        for i in list {
-        //            print("Capital: \(i.capital) Land: \(i.name) Area: \(i.area)")
-        //        }
     }
     
     
@@ -106,7 +101,6 @@ class SecondViewController: UIViewController {
             landFour.setTitle(answer, for: .normal)
             setOtherNames(fake1: landOne, fake2: landTwo, fake3: landThre)
         }
-        print(answer)
     }
     
     func setOtherNames(fake1: UIButton, fake2: UIButton, fake3: UIButton) {
@@ -135,7 +129,6 @@ class SecondViewController: UIViewController {
         fake2.setTitle(fakeAnswer2, for:  .normal)
         let fakeAnswer3 = getFlags.checkCountry(landCode: land3)
         fake3.setTitle(fakeAnswer3, for:  .normal)
-        print(fakeAnswer1, fakeAnswer2, fakeAnswer3)
     }
     
     
@@ -144,7 +137,7 @@ class SecondViewController: UIViewController {
             if button.currentTitle == answer {
                 
                 UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
-                    button.backgroundColor = .greenOne
+                    button.backgroundColor = UIColor(named: "Greeney")
                     button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                 })  { _ in
                     self.points = self.points + 1
@@ -158,14 +151,14 @@ class SecondViewController: UIViewController {
                 }
             }else {
                 UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
-                    button.backgroundColor = .redOne
+                    button.backgroundColor = UIColor(named: "Redish")
                     button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                 })  { _ in
                     button.backgroundColor = UIColor(named: "Beigey")
                     button.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
                     if self.randomNumber == 1 {
                         UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
-                            self.landOne.backgroundColor = .greenOne
+                            self.landOne.backgroundColor = UIColor(named: "Greeney")
                             self.landOne.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         })  { _ in
                             self.newFlag((Any).self)
@@ -174,7 +167,7 @@ class SecondViewController: UIViewController {
                         }
                     } else if self.randomNumber == 2 {
                         UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
-                            self.landTwo.backgroundColor = .greenOne
+                            self.landTwo.backgroundColor = UIColor(named: "Greeney")
                             self.landTwo.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         })  { _ in
                             self.newFlag((Any).self)
@@ -183,7 +176,7 @@ class SecondViewController: UIViewController {
                         }
                     }else if self.randomNumber == 3 {
                         UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
-                            self.landThre.backgroundColor = .greenOne
+                            self.landThre.backgroundColor = UIColor(named: "Greeney")
                             self.landThre.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         })  { _ in
                             self.newFlag((Any).self)
@@ -192,7 +185,7 @@ class SecondViewController: UIViewController {
                         }
                     } else if self.randomNumber == 4 {
                         UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
-                            self.landFour.backgroundColor = .greenOne
+                            self.landFour.backgroundColor = UIColor(named: "Greeney")
                             self.landFour.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         })  { _ in
                             self.newFlag((Any).self)
@@ -223,13 +216,10 @@ class SecondViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
-                print("default")
                 self.navigationController?.popViewController(animated: true)
-            case .cancel:
-                print("cancel")
+            case .cancel: break
                 
-            case .destructive:
-                print("destructive")
+            case .destructive: break
                 
             @unknown default:
                 fatalError()
@@ -237,13 +227,10 @@ class SecondViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "New Game", style: .default, handler: { action in
             switch action.style{
             case .default:
-                print("default")
                 self.startFresh()
-            case .cancel:
-                print("cancel")
+            case .cancel: break
                 
-            case .destructive:
-                print("destructive")
+            case .destructive: break
                 
             @unknown default:
                 fatalError()

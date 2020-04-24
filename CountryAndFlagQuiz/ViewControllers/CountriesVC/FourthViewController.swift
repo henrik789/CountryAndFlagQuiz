@@ -75,9 +75,7 @@ class FourthViewController: UIViewController {
     @objc func removeViewFromSuperView() {
         if let subView = self.flagView{
             subView.removeFromSuperview()
-            print("tar bort")
         } else {
-            print("ikke!!")
             return
         }
     }
@@ -146,7 +144,6 @@ extension FourthViewController: UISearchBarDelegate {
             return country.name.lowercased().hasPrefix(searchText.lowercased())
         })
         countryCV.reloadData()
-        print(searchText)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

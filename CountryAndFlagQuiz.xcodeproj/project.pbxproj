@@ -16,13 +16,11 @@
 		AF0891D6242F4A3100318B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0891D4242F4A3100318B9A /* LaunchScreen.storyboard */; };
 		AF1EEFE0245176DB00C70992 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEFDF245176DB00C70992 /* StorageController.swift */; };
 		AF1EEFE22451770800C70992 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEFE12451770800C70992 /* User.swift */; };
-		AF24C7DE244F578B001577D6 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF24C7DD244F578B001577D6 /* UserSettings.swift */; };
 		AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264087243093F60031F1AC /* ThirdViewController.swift */; };
 		AF26408A243094040031F1AC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264089243094040031F1AC /* FourthViewController.swift */; };
 		AF3FE5F024498E2A00B56334 /* CountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */; };
 		AF3FE5F124498E2A00B56334 /* CountriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */; };
 		AFB3043C2445F32000FAD5C0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3043B2445F32000FAD5C0 /* Views.swift */; };
-		AFB3043E2445FB4100FAD5C0 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3043D2445FB4100FAD5C0 /* Gradient.swift */; };
 		AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD59243E095400168AF2 /* countriesDict.json */; };
 		AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5B243E0B6700168AF2 /* Country.swift */; };
 		AFE1BD5E243E0B6D00168AF2 /* GetFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */; };
@@ -30,7 +28,6 @@
 		AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD62243E0BC200168AF2 /* Formatter.swift */; };
 		AFE1BD65243E0BC800168AF2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD64243E0BC800168AF2 /* UIButton.swift */; };
 		AFE1BD69243E0BD400168AF2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD68243E0BD400168AF2 /* UILabel.swift */; };
-		AFE1BD6F243E0D5700168AF2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD6E243E0D5700168AF2 /* UIColor.swift */; };
 		AFE1BD71243E0F2B00168AF2 /* Countries in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD70243E0F2A00168AF2 /* Countries */; };
 /* End PBXBuildFile section */
 
@@ -46,13 +43,11 @@
 		AF0891D7242F4A3100318B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF1EEFDF245176DB00C70992 /* StorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 		AF1EEFE12451770800C70992 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AF24C7DD244F578B001577D6 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		AF264087243093F60031F1AC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		AF264089243094040031F1AC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		AFB3043B2445F32000FAD5C0 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
-		AFB3043D2445FB4100FAD5C0 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		AFE1BD59243E095400168AF2 /* countriesDict.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countriesDict.json; sourceTree = "<group>"; };
 		AFE1BD5B243E0B6700168AF2 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFlags.swift; sourceTree = "<group>"; };
@@ -60,7 +55,6 @@
 		AFE1BD62243E0BC200168AF2 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		AFE1BD64243E0BC800168AF2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		AFE1BD68243E0BD400168AF2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		AFE1BD6E243E0D5700168AF2 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		AFE1BD70243E0F2A00168AF2 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Countries; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +122,6 @@
 				AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */,
 				AFE1BD5B243E0B6700168AF2 /* Country.swift */,
 				AFE1BD59243E095400168AF2 /* countriesDict.json */,
-				AF24C7DD244F578B001577D6 /* UserSettings.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -137,10 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				AFB3043B2445F32000FAD5C0 /* Views.swift */,
-				AFB3043D2445FB4100FAD5C0 /* Gradient.swift */,
 				AFE1BD64243E0BC800168AF2 /* UIButton.swift */,
 				AFE1BD68243E0BD400168AF2 /* UILabel.swift */,
-				AFE1BD6E243E0D5700168AF2 /* UIColor.swift */,
 				AFE1BD62243E0BC200168AF2 /* Formatter.swift */,
 			);
 			path = Helpers;
@@ -259,18 +250,15 @@
 				AF26408A243094040031F1AC /* FourthViewController.swift in Sources */,
 				AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */,
 				AF0891CE242F4A3000318B9A /* SecondViewController.swift in Sources */,
-				AFB3043E2445FB4100FAD5C0 /* Gradient.swift in Sources */,
 				AF0891CC242F4A3000318B9A /* FirstViewController.swift in Sources */,
 				AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */,
 				AF0891C8242F4A3000318B9A /* AppDelegate.swift in Sources */,
 				AFE1BD60243E0B7600168AF2 /* SwiftyJSON.swift in Sources */,
-				AFE1BD6F243E0D5700168AF2 /* UIColor.swift in Sources */,
 				AFB3043C2445F32000FAD5C0 /* Views.swift in Sources */,
 				AFE1BD65243E0BC800168AF2 /* UIButton.swift in Sources */,
 				AF3FE5F024498E2A00B56334 /* CountriesCollectionViewCell.swift in Sources */,
 				AFE1BD5E243E0B6D00168AF2 /* GetFlags.swift in Sources */,
 				AF0891CA242F4A3000318B9A /* SceneDelegate.swift in Sources */,
-				AF24C7DE244F578B001577D6 /* UserSettings.swift in Sources */,
 				AF1EEFE0245176DB00C70992 /* StorageController.swift in Sources */,
 				AF1EEFE22451770800C70992 /* User.swift in Sources */,
 			);

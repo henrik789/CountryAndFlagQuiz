@@ -24,9 +24,6 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         view.bringSubviewToFront(flagImageView)
         view.backgroundColor = UIColor(named: "Whiteish")
         mainButton.mainStyle()
@@ -41,24 +38,18 @@ class ThirdViewController: UIViewController {
         labelBottom.layer.masksToBounds = true
         labelBottom.text = "Country 2?"
         flagImageView.image = UIImage(named: "logoShape_Blue.png")
-        setupLabels()
     }
     
-    func setupLabels() {
+    func config() {
         guard let user = StorageController.shared.fetchUser() else { return }
         totalTime = user.timeCount
         timeFromStart = user.timeCount
         timeLabel.text = "Time: \(timeFormatted(totalTime))"
         pointsLabel.text = "Points: \(points)"
         progress = Progress(totalUnitCount: Int64(totalTime))
-    }
-    
-    func config() {
-        setupLabels()
         countryList = getFlags.readJSONFromFile()
         points = 0
         flagCounter = 0
-        
         progressView.progress = 0
         startNewGame()
         startTimer()
@@ -69,24 +60,19 @@ class ThirdViewController: UIViewController {
     func startNewGame() {
         setupLabelTap()
         let randomCountry = Int.random(in: 0..<countryList.count)
-        
         var fakeCountry = Int.random(in: 0..<countryList.count)
         while fakeCountry == randomCountry {
             fakeCountry = Int.random(in: 0..<countryList.count)
-            print("Error! game engine", randomCountry, fakeCountry)
         }
         
         var flag = countryList[randomCountry].flagUrl
-        
         flag = flag.replacingOccurrences(of: ".", with: "")
-        
         flagImageView.image = UIImage(named: "\(flag).png") ?? UIImage(named: "logoShape_Blue.png")
         if randomCountry % 2 == 0 {
             labelTop.text = "Capital: \(countryList[randomCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[randomCountry].population))"
             labelBottom.text = "Capital: \(countryList[fakeCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[fakeCountry].population))"
             right = true
             countryList.remove(at: randomCountry)
-            print(countryList.count, randomCountry)
         } else {
             labelTop.text = "Capital: \(countryList[fakeCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[fakeCountry].population))"
             labelBottom.text = "Capital: \(countryList[randomCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[randomCountry].population))"
@@ -98,7 +84,6 @@ class ThirdViewController: UIViewController {
     }
     
     func setupLabelTap() {
-        
         let leftLabelTap = UITapGestureRecognizer(target: self, action: #selector(self.leftlabelTapped(_:)))
         self.labelBottom.isUserInteractionEnabled = true
         self.labelBottom.addGestureRecognizer(leftLabelTap)
@@ -117,7 +102,6 @@ class ThirdViewController: UIViewController {
             pointsLabel.shake()
             self.startNewGame()
         }
-        print("left labelTapped")
     }
     
     @objc func rightabelTapped(_ sender: UITapGestureRecognizer) {
@@ -141,11 +125,11 @@ class ThirdViewController: UIViewController {
     // Timer ************************************************************************************************
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        countdownTimer.tolerance  = 0.3
+        countdownTimer.tolerance  = 0.1
     }
     
     @objc func updateTime() {
-        if totalTime > 0  && flagCounter > 1{
+        if totalTime > 0  && countryList.count > 1{
             totalTime -= 1
             incrementProgress()
             timeLabel.text = "Time: \(timeFormatted(totalTime))"
@@ -155,8 +139,11 @@ class ThirdViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if countdownTimer.isValid {
-            endTimer()
+        if countdownTimer != nil {
+            if countdownTimer.isValid {
+            countdownTimer.invalidate()
+            print("view disappear")
+            }
         }
     }
     
@@ -185,12 +172,17 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func startGamePressed(_ sender: UIButton) {
-        if countdownTimer != nil {
+        if countdownTimer == nil {
+            config()
+        }else {
             if countdownTimer.isValid {
                 endTimer()
+                print(countdownTimer.isValid)
             }
+            print("new game")
+            config()
         }
-        config()
+//        config()
     }
     
     

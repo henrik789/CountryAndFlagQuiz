@@ -20,7 +20,6 @@ class GetFlags {
         if pictures.count < 2 {
             let fileName = pictures[0]
             var components = fileName.components(separatedBy: ".")
-            print("Last one is \(pictures[0])")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
                 return components.joined(separator: ".")
@@ -30,7 +29,6 @@ class GetFlags {
             let randomFlag = pictures[randomNumber]
             let fileName = randomFlag
             pictures.remove(at: randomNumber)
-            //                print(pictures.count)
             var components = fileName.components(separatedBy: ".")
             if components.count > 1 { // If there is a file extension
                 components.removeLast()
@@ -64,7 +62,6 @@ class GetFlags {
         var components = fileName.components(separatedBy: ".")
         if components.count > 1 { // If there is a file extension
             components.removeLast()
-            //                print("1: \(components.joined(separator: "."))")
             return components.joined(separator: ".")
         }
 
