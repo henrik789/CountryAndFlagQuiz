@@ -76,7 +76,7 @@ class SecondViewController: UIViewController {
         flagLimit = user.flagCount
         progress = Progress(totalUnitCount: Int64(flagLimit))
         progressView.progressTintColor = UIColor(named: "Blueish")
-        progressView.trackTintColor = UIColor(named: "Whiteish")
+        progressView.trackTintColor = UIColor(named: "Greyish")
         flagLabel.text = "Flags: \(flagCounter)/\(flagLimit)"
         pointsLabel.text = "Points: \(points)/\(flagLimit)"
         landOne.commonStyle()
@@ -86,6 +86,7 @@ class SecondViewController: UIViewController {
         mainBtn.mainStyle()
         
         newFlag((Any).self)
+        flagLabel.adjustsFontSizeToFitWidth = true
         pointsLabel.adjustsFontSizeToFitWidth = true
     }
     

@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag &amp; Country Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-5i-dDx">
-                                <rect key="frame" x="41.5" y="434.5" width="331" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag &amp; Country Quiz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-5i-dDx">
+                                <rect key="frame" x="20.5" y="434.5" width="373" height="37"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" name="Blueish"/>
                                 <nil key="highlightedColor"/>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" name="Whiteish"/>
                         <constraints>
                             <constraint firstItem="sOn-5i-dDx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CeC-3c-0t9"/>
-                            <constraint firstItem="sOn-5i-dDx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="D0Z-Tx-jiS"/>
+                            <constraint firstItem="sOn-5i-dDx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="D0Z-Tx-jiS"/>
                             <constraint firstItem="sOn-5i-dDx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DWi-DC-oAM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,10 +40,10 @@
     </scenes>
     <resources>
         <namedColor name="Blueish">
-            <color red="0.15294117647058825" green="0.29411764705882354" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.050980392156862744" green="0.27843137254901962" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Whiteish">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

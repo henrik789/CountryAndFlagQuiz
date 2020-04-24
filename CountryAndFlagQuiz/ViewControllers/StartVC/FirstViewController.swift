@@ -64,9 +64,9 @@ class FirstViewController: UIViewController {
         let user = StorageController.shared.fetchUser()
         settingsView.addGestureRecognizer(tapGesture)
         sliderA.tintColor = UIColor(named: "ButtonTint")
-        sliderA.thumbTintColor = UIColor(named: "Greyish")
+        sliderA.thumbTintColor = UIColor(named: "Blueish")
         sliderB.tintColor = UIColor(named: "ButtonTint")
-        sliderB.thumbTintColor = UIColor(named: "Greyish")
+        sliderB.thumbTintColor = UIColor(named: "Blueish")
         
         sliderA.setValue(Float(user?.flagCount ?? 100), animated: true)
         sliderB.setValue(Float(user?.timeCount ?? 30), animated: true)
@@ -87,7 +87,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func sliderB(_ sender: Any) {
-        let step: Float = 10
+        let step: Float = 5
         let roundedValue = round(sliderB.value / step) * step
         timeNumber = Int(roundedValue)
         labelD.text = String(timeNumber)

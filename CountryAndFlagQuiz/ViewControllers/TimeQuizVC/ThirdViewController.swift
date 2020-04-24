@@ -10,7 +10,9 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var labelTop: UILabel!
     @IBOutlet weak var labelBottom: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
+    @IBOutlet weak var progressView: UIProgressView!
     
+    var progress = Progress(totalUnitCount: 10)
     var getFlags = GetFlags()
     var countryList = [Country]()
     var right = false
@@ -22,7 +24,6 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        config()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,11 +33,13 @@ class ThirdViewController: UIViewController {
         mainButton.setTitle("Start", for: .normal)
         self.title = "Time Challenge"
         labelTop.layer.cornerRadius = 10
+        labelTop.adjustsFontSizeToFitWidth = true
         labelTop.layer.masksToBounds = true
-        labelTop.text = "Country 1"
+        labelTop.text = "Country 1 or"
         labelBottom.layer.cornerRadius = 10
+        labelBottom.adjustsFontSizeToFitWidth = true
         labelBottom.layer.masksToBounds = true
-        labelBottom.text = "Country 2"
+        labelBottom.text = "Country 2?"
         flagImageView.image = UIImage(named: "logoShape_Blue.png")
         setupLabels()
     }
@@ -47,6 +50,7 @@ class ThirdViewController: UIViewController {
         timeFromStart = user.timeCount
         timeLabel.text = "Time: \(timeFormatted(totalTime))"
         pointsLabel.text = "Points: \(points)"
+        progress = Progress(totalUnitCount: Int64(totalTime))
     }
     
     func config() {
@@ -54,6 +58,8 @@ class ThirdViewController: UIViewController {
         countryList = getFlags.readJSONFromFile()
         points = 0
         flagCounter = 0
+        
+        progressView.progress = 0
         startNewGame()
         startTimer()
     }
@@ -124,30 +130,47 @@ class ThirdViewController: UIViewController {
             pointsLabel.shake()
             self.startNewGame()
         }
-        print("right labelTapped")
-        
     }
     
+    func incrementProgress() {
+        progress.completedUnitCount += 1
+        let progressFloat = Float(progress.fractionCompleted)
+        progressView.setProgress(progressFloat, animated: true)
+    }
     
     // Timer ************************************************************************************************
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        countdownTimer.tolerance  = 0.1
+        countdownTimer.tolerance  = 0.3
     }
     
     @objc func updateTime() {
-        timeLabel.text = "Time: \(timeFormatted(totalTime))"
-        if totalTime != 0 {
+        if totalTime > 0  && flagCounter > 1{
             totalTime -= 1
+            incrementProgress()
+            timeLabel.text = "Time: \(timeFormatted(totalTime))"
         } else {
             endTimer()
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if countdownTimer.isValid {
+            endTimer()
+        }
+    }
+    
     func endTimer() {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.multiplier = 100
+        formatter.minimumIntegerDigits = 1
+        formatter.maximumIntegerDigits = 3
+        formatter.maximumFractionDigits = 2
+        let percent = formatter.string(from: NSNumber(value: Float(points) / Float(flagCounter)))
         countdownTimer.invalidate()
         mainButton.setTitle("Try Again", for: .normal)
-        labelTop.text = "You scored \(points)/\(flagCounter) points in \(timeFromStart) seconds. \n "
+        labelTop.text = "You scored \(points)/\(flagCounter) points in \(timeFromStart) seconds. \n Correct answers: \(percent!)"
         
         labelBottom.isUserInteractionEnabled = false
         labelTop.isUserInteractionEnabled = false
@@ -162,6 +185,11 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func startGamePressed(_ sender: UIButton) {
+        if countdownTimer != nil {
+            if countdownTimer.isValid {
+                endTimer()
+            }
+        }
         config()
     }
     
