@@ -56,9 +56,6 @@ class SecondViewController: UIViewController {
         flagImage.image = UIImage(named: givenLand + ".png")
         setCountryName(land: givenLand)
         flagLabel.text = "Flags: \(flagCounter) / \(flagLimit)"
-        if points > highscore {
-            save()
-        }
     }
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -69,10 +66,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         getFlags.buildArray()
         config()
     }
@@ -154,6 +147,9 @@ class SecondViewController: UIViewController {
                     button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                 })  { _ in
                     self.points = self.points + 1
+                    if self.points > self.highscore {
+                        self.save()
+                    }
                     self.pointsLabel.text = "Points: \(self.points)"
                     self.winAnimation()
                     if self.flagCounter != self.flagLimit {
@@ -163,6 +159,11 @@ class SecondViewController: UIViewController {
                     button.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
                 }
             }else {
+                landOne.isUserInteractionEnabled = false
+                landTwo.isUserInteractionEnabled = false
+                landThre.isUserInteractionEnabled = false
+                landFour.isUserInteractionEnabled = false
+                
                 UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
                     button.backgroundColor = UIColor(named: "Redish")
                     button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
@@ -214,6 +215,10 @@ class SecondViewController: UIViewController {
         if flagCounter == flagLimit {
             startOver()
         }
+        landOne.isUserInteractionEnabled = true
+        landTwo.isUserInteractionEnabled = true
+        landThre.isUserInteractionEnabled = true
+        landFour.isUserInteractionEnabled = true
     }
     
     func incrementProgress() {
