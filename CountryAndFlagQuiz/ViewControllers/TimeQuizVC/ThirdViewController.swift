@@ -21,9 +21,19 @@ class ThirdViewController: UIViewController {
     var countdownTimer: Timer!
     var totalTime = 10
     var timeFromStart:Int = 0
+    var storageController = StorageController()
+    var winPercent: Float = 1.0
+    var highscore: Float = 1.0
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         view.bringSubviewToFront(flagImageView)
         view.backgroundColor = UIColor(named: "Whiteish")
         mainButton.mainStyle()
@@ -44,6 +54,7 @@ class ThirdViewController: UIViewController {
         guard let user = StorageController.shared.fetchUser() else { return }
         totalTime = user.timeCount
         timeFromStart = user.timeCount
+        highscore = user.percentTimeQuiz
         timeLabel.text = "Time: \(timeFormatted(totalTime))"
         pointsLabel.text = "Points: \(points)"
         progress = Progress(totalUnitCount: Int64(totalTime))
@@ -141,8 +152,8 @@ class ThirdViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         if countdownTimer != nil {
             if countdownTimer.isValid {
-            countdownTimer.invalidate()
-            print("view disappear")
+                countdownTimer.invalidate()
+                print("view disappear")
             }
         }
     }
@@ -155,13 +166,16 @@ class ThirdViewController: UIViewController {
         formatter.maximumIntegerDigits = 3
         formatter.maximumFractionDigits = 2
         let percent = formatter.string(from: NSNumber(value: Float(points) / Float(flagCounter)))
+        winPercent = 100 * (Float(points) / Float(flagCounter))
         countdownTimer.invalidate()
-        mainButton.setTitle("Try Again", for: .normal)
+        mainButton.setTitle("Try Again", for: .selected)
         labelTop.text = "You scored \(points)/\(flagCounter) points in \(timeFromStart) seconds. \n Correct answers: \(percent!)"
-        
         labelBottom.isUserInteractionEnabled = false
         labelTop.isUserInteractionEnabled = false
         flagImageView.image = UIImage(named: "logoShape_Blue.png")
+        if winPercent > highscore {
+            save()
+        }
     }
     
     
@@ -182,16 +196,23 @@ class ThirdViewController: UIViewController {
             print("new game")
             config()
         }
-//        config()
+        //        config()
     }
     
+    func save() {
+        var user = StorageController.shared.fetchUser()
+        user?.percentTimeQuiz = winPercent
+        storageController.save(user!)
+    }
     
     func winAnimation() {
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
         })
         UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.pointsLabel.layer.backgroundColor = UIColor.clear.cgColor
         })
     }
     

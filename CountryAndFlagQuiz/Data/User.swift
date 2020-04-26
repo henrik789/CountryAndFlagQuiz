@@ -10,6 +10,7 @@ import Foundation
 
 struct User: Codable {
 	var flagCount: Int
-	var points: Int
+	var percentTimeQuiz: Float
+    var pointsFlagQuiz: Int
     var timeCount: Int
 }

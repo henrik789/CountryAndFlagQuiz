@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				AF1EEFE12451770800C70992 /* User.swift */,
-				AF1EEFDF245176DB00C70992 /* StorageController.swift */,
 				AFE1BD5F243E0B7600168AF2 /* SwiftyJSON.swift */,
+				AF1EEFDF245176DB00C70992 /* StorageController.swift */,
 				AFE1BD5D243E0B6D00168AF2 /* GetFlags.swift */,
 				AFE1BD5B243E0B6700168AF2 /* Country.swift */,
 				AFE1BD59243E095400168AF2 /* countriesDict.json */,

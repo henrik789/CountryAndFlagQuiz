@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     var time = 0
     var progress = Progress(totalUnitCount: 1)
     var list = [Country]()
+    var storageController = StorageController()
+    var highscore = 0
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var countdownLabelHome: UILabel!
@@ -25,10 +27,13 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var landFour: UIButton!
     @IBOutlet weak var mainBtn: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
+    
     @IBAction func restartBtn(_ sender: Any) {
         startFresh()
     }
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     @IBAction func landOne(_ sender: Any) {
         let buttonOne = sender
         evaluate(button: buttonOne as! UIButton)
@@ -51,6 +56,9 @@ class SecondViewController: UIViewController {
         flagImage.image = UIImage(named: givenLand + ".png")
         setCountryName(land: givenLand)
         flagLabel.text = "Flags: \(flagCounter) / \(flagLimit)"
+        if points > highscore {
+            save()
+        }
     }
     @IBOutlet weak var flagImage: UIImageView!
     
@@ -61,6 +69,10 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getFlags.buildArray()
         config()
     }
@@ -69,6 +81,7 @@ class SecondViewController: UIViewController {
     func config() {
         guard let user = StorageController.shared.fetchUser() else { return }
         flagLimit = user.flagCount
+        highscore = user.pointsFlagQuiz
         progress = Progress(totalUnitCount: Int64(flagLimit))
         progressView.progressTintColor = UIColor(named: "Blueish")
         progressView.trackTintColor = UIColor(named: "Greyish")
@@ -237,6 +250,12 @@ class SecondViewController: UIViewController {
             }}))
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+    func save() {
+        var user = StorageController.shared.fetchUser()
+        user?.pointsFlagQuiz = points
+        storageController.save(user!)
     }
     
     func startFresh() {

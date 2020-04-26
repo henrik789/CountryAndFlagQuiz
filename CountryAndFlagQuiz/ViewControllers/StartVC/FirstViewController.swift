@@ -9,11 +9,14 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var sliderB: UISlider!
     @IBOutlet var settingsView: UIView!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var highscoreFlag: UILabel!
+    @IBOutlet weak var highscoreTime: UILabel!
     
     var storageController = StorageController()
     var timeNumber = 30
     var flagNumber = 40
-    
+    var scoreFlag = 1
+    var scoreTime: Float = 1.0
     
     public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
@@ -22,10 +25,17 @@ class FirstViewController: UIViewController {
     public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        config()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        config()
     }
     
     @IBAction func settingsButton(_ sender: Any) {
@@ -53,9 +63,9 @@ class FirstViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
         let user = StorageController.shared.fetchUser()
         settingsView.addGestureRecognizer(tapGesture)
-        sliderA.tintColor = UIColor(named: "ButtonTint")
+        sliderA.tintColor = UIColor(named: "Whiteish")
         sliderA.thumbTintColor = UIColor(named: "Blueish")
-        sliderB.tintColor = UIColor(named: "ButtonTint")
+        sliderB.tintColor = UIColor(named: "Whiteish")
         sliderB.thumbTintColor = UIColor(named: "Blueish")
         
         sliderA.setValue(Float(user?.flagCount ?? 100), animated: true)
@@ -64,6 +74,10 @@ class FirstViewController: UIViewController {
         timeNumber = user?.timeCount ?? 30
         labelB.text = String(flagNumber)
         labelD.text = String(timeNumber)
+        scoreFlag = user?.pointsFlagQuiz ?? 0
+        scoreTime = user?.percentTimeQuiz ?? 0
+        highscoreFlag.text = "Highscore for FlagQuiz: \(scoreFlag))"
+        highscoreTime.text = "Highscore for TimeQuiz: \(scoreTime)% "
         settingsButton.commonStyle()
     }
     

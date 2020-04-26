@@ -13,7 +13,7 @@ class StorageController {
 		guard fetchUser() == nil else {
 			return
 		}
-        let user = User(flagCount: 100, points: 1, timeCount: 30)
+        let user = User(flagCount: 100, percentTimeQuiz: 1.0, pointsFlagQuiz: 1, timeCount: 30)
 		save(user)
 	}
 	
