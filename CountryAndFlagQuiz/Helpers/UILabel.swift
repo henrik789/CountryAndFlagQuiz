@@ -14,36 +14,39 @@ extension UILabel {
         if screenHeight < 600 {
             switch Adjustratio {
             case "small":
-                return font = font.withSize(screenHeight * 0.021)
+                print("small")
+                return font = font.withSize(15)
             case "medium":
-                return font = font.withSize(screenHeight * 0.025)
+                print("med")
+                return font = font.withSize(17)
             case "large":
-                return font = font.withSize(screenHeight * 0.058)
+                print("large")
+                return font = font.withSize(39)
             default:
-                return font = font.withSize(screenHeight * 0.028)
+                return font = font.withSize(16)
             }
         }else if screenHeight < 800 {
             switch Adjustratio {
             case "small":
-                return font = font.withSize(screenHeight * 0.019)
+                return font = font.withSize(16)
             case "medium":
-                return font = font.withSize(screenHeight * 0.024)
+                return font = font.withSize(19)
             case "large":
-                return font = font.withSize(screenHeight * 0.050)
+                return font = font.withSize(41)
             default:
-                return font = font.withSize(screenHeight * 0.028)
+                return font = font.withSize(16)
             }
         } else {
             print("big one")
             switch Adjustratio {
             case "small":
-                return font = font.withSize(screenHeight * 0.018)
+                return font = font.withSize(17)
             case "medium":
-                return font = font.withSize(screenHeight * 0.020)
+                return font = font.withSize(20)
             case "large":
-                return font = font.withSize(screenHeight * 0.056)
+                return font = font.withSize(42)
             default:
-                return font = font.withSize(screenHeight * 0.028)
+                return font = font.withSize(16)
             }
         }
     }

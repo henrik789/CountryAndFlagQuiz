@@ -119,8 +119,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Start" image="homeBarItem" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="belowLabel" destination="A5M-7J-77L" id="NO2-4p-rfw"/>
-                        <outlet property="headerLabel" destination="KQZ-1w-vlD" id="Dfq-9I-vZI"/>
+                        <outlet property="bottomLabel" destination="ecv-Od-bZX" id="ghN-VR-2kW"/>
+                        <outlet property="headline" destination="eGZ-MZ-Gi7" id="VFD-sM-Nqo"/>
+                        <outlet property="subHead" destination="A5M-7J-77L" id="NO2-4p-rfw"/>
+                        <outlet property="topLabel" destination="KQZ-1w-vlD" id="Dfq-9I-vZI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -136,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxy-3" translatesAutoresizingMaskIntoConstraints="NO" id="agn-z6-CSH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000045" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-4M-jFe">
                                 <rect key="frame" x="0.0" y="102" width="414" height="30"/>
@@ -148,14 +150,6 @@
                                         <state key="normal" title="Restart">
                                             <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="mainBtn:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cDg-jV-Jbd"/>
                                         </connections>
@@ -167,14 +161,6 @@
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="3jz-Ds-hoY" kind="presentation" id="PFn-Jf-nGW"/>
                                         </connections>
@@ -202,11 +188,6 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" name="Whiteish"/>
                                         <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-0O-65q">
                                         <rect key="frame" x="211.5" y="0.0" width="190.5" height="30"/>
@@ -214,11 +195,6 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" name="Whiteish"/>
                                         <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -242,7 +218,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="af" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-yF-m1b">
                                 <rect key="frame" x="16.5" y="191.5" width="381" height="334.5"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-5v-YO6">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-5v-YO6">
                                 <rect key="frame" x="16.5" y="564" width="381" height="229"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Eh-g9b">
@@ -253,9 +229,6 @@
                                             <color key="titleColor" name="ButtonTint"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
@@ -327,7 +300,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="Indigo"/>
+                        <color key="backgroundColor" name="GreyOne"/>
                         <constraints>
                             <constraint firstItem="2qZ-5v-YO6" firstAttribute="centerX" secondItem="iIs-yF-m1b" secondAttribute="centerX" id="2kc-sK-ui8"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="top" secondItem="Bgc-4M-jFe" secondAttribute="top" constant="-14" id="4aM-dQ-FmJ"/>
@@ -456,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxy-3" translatesAutoresizingMaskIntoConstraints="NO" id="9k8-l6-SeW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000045" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9US-Nt-g2F">
                                 <rect key="frame" x="0.0" y="102" width="414" height="32"/>
@@ -468,17 +441,12 @@
                                         <state key="normal" title="Restart">
                                             <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="startGamePressed:" destination="F2J-jt-Ass" eventType="touchUpInside" id="pnz-1i-wCH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKb-3n-BmC">
-                                        <rect key="frame" x="210" y="-1" width="190.5" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKb-3n-BmC">
+                                        <rect key="frame" x="211.5" y="0.0" width="190.5" height="32"/>
                                         <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Settings">
@@ -499,7 +467,6 @@
                                     <constraint firstItem="RKb-3n-BmC" firstAttribute="height" secondItem="9US-Nt-g2F" secondAttribute="height" id="auy-66-F0h"/>
                                     <constraint firstItem="V51-Vj-ZKc" firstAttribute="height" secondItem="9US-Nt-g2F" secondAttribute="height" id="bBq-zZ-P11"/>
                                     <constraint firstItem="V51-Vj-ZKc" firstAttribute="centerY" secondItem="9US-Nt-g2F" secondAttribute="centerY" id="bHp-07-22s"/>
-                                    <constraint firstItem="RKb-3n-BmC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V51-Vj-ZKc" secondAttribute="trailing" constant="8" symbolic="YES" id="hCn-Se-Eap"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V51-Vj-ZKc" secondAttribute="trailing" constant="20" symbolic="YES" id="oBc-h0-2dg"/>
                                 </constraints>
                             </view>
@@ -677,14 +644,6 @@
                                     <constraint firstItem="Xm7-5E-SiS" firstAttribute="width" secondItem="RIX-y3-GIb" secondAttribute="width" id="dr4-zF-cCz"/>
                                     <constraint firstItem="Pyk-Wc-RDA" firstAttribute="width" secondItem="RIX-y3-GIb" secondAttribute="width" id="i9b-Hg-e3j"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="Blueish"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-ne-wRH">
                                 <rect key="frame" x="20" y="20" width="66" height="66"/>
@@ -809,17 +768,6 @@
                                             <constraint firstItem="Vut-dZ-GyI" firstAttribute="width" secondItem="vZb-2L-98F" secondAttribute="width" id="aIq-fe-h9A"/>
                                             <constraint firstItem="vZb-2L-98F" firstAttribute="centerX" secondItem="rge-Wt-kpx" secondAttribute="centerX" id="uLf-e7-IvR"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="PinkOne"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="PinkOne"/>
@@ -829,14 +777,6 @@
                                     <constraint firstItem="rge-Wt-kpx" firstAttribute="height" secondItem="feF-uC-hW8" secondAttribute="height" multiplier="0.9" id="Zzd-eE-QIy"/>
                                     <constraint firstItem="rge-Wt-kpx" firstAttribute="width" secondItem="feF-uC-hW8" secondAttribute="width" multiplier="0.9" id="r5s-ER-5aX"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="GreyOne"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rj-jE-ipO">
                                 <rect key="frame" x="20" y="20" width="66" height="66"/>
