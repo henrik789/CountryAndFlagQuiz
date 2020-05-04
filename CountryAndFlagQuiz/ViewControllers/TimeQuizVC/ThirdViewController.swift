@@ -31,26 +31,32 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         view.bringSubviewToFront(flagImageView)
-        view.backgroundColor = UIColor(named: "Whiteish")
         mainButton.mainStyle()
         mainButton.setTitle("Start", for: .normal)
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.view.backgroundColor = UIColor.clear
+        navigationController?.navigationBar.isHidden = true
         self.title = "Time Challenge"
         labelTop.layer.cornerRadius = 10
         labelTop.adjustsFontSizeToFitWidth = true
         labelTop.layer.masksToBounds = true
-        labelTop.text = "Country 1 or"
+        labelTop.text = "Country 1"
         labelBottom.layer.cornerRadius = 10
         labelBottom.adjustsFontSizeToFitWidth = true
         labelBottom.layer.masksToBounds = true
-        labelBottom.text = "Country 2?"
-        flagImageView.image = UIImage(named: "logoShape_Blue.png")
+        labelBottom.text = "Country 2"
+        flagImageView.image = UIImage(named: "newFlag_trans.png")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
     }
     
     func config() {
+
         guard let user = StorageController.shared.fetchUser() else { return }
         totalTime = user.timeCount
         timeFromStart = user.timeCount
@@ -206,11 +212,12 @@ class ThirdViewController: UIViewController {
     }
     
     func winAnimation() {
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.pointsLabel.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
+            self.pointsLabel.layer.cornerRadius = 7
         })
-        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.1, delay: 0.2, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.pointsLabel.layer.backgroundColor = UIColor.clear.cgColor
         })

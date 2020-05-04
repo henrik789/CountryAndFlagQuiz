@@ -20,6 +20,8 @@
 		AF26408A243094040031F1AC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264089243094040031F1AC /* FourthViewController.swift */; };
 		AF3FE5F024498E2A00B56334 /* CountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */; };
 		AF3FE5F124498E2A00B56334 /* CountriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */; };
+		AF8CEE032456C30D00B630A5 /* SettingsFlagQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */; };
+		AF8CEE052456C7A300B630A5 /* SettingsTimeQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */; };
 		AFB3043C2445F32000FAD5C0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3043B2445F32000FAD5C0 /* Views.swift */; };
 		AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD59243E095400168AF2 /* countriesDict.json */; };
 		AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5B243E0B6700168AF2 /* Country.swift */; };
@@ -47,6 +49,8 @@
 		AF264089243094040031F1AC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlagQuiz.swift; sourceTree = "<group>"; };
+		AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTimeQuizViewController.swift; sourceTree = "<group>"; };
 		AFB3043B2445F32000FAD5C0 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		AFE1BD59243E095400168AF2 /* countriesDict.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countriesDict.json; sourceTree = "<group>"; };
 		AFE1BD5B243E0B6700168AF2 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0891CD242F4A3000318B9A /* SecondViewController.swift */,
+				AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */,
 			);
 			path = QuizVC;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AF264087243093F60031F1AC /* ThirdViewController.swift */,
+				AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */,
 			);
 			path = TimeQuizVC;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 				AF26408A243094040031F1AC /* FourthViewController.swift in Sources */,
 				AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */,
 				AF0891CE242F4A3000318B9A /* SecondViewController.swift in Sources */,
+				AF8CEE052456C7A300B630A5 /* SettingsTimeQuizViewController.swift in Sources */,
+				AF8CEE032456C30D00B630A5 /* SettingsFlagQuiz.swift in Sources */,
 				AF0891CC242F4A3000318B9A /* FirstViewController.swift in Sources */,
 				AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */,
 				AF0891C8242F4A3000318B9A /* AppDelegate.swift in Sources */,

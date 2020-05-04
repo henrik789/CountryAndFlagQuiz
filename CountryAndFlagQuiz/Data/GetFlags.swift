@@ -472,7 +472,7 @@ class GetFlags {
         case "gb":
             return "The United Kingdom"
         case "us":
-            return "The United States"
+            return "The United States of America"
         case "uy":
             return "Uruguay"
         case "uz":
@@ -492,7 +492,7 @@ class GetFlags {
         case "zm":
             return "Zambia"
         case "zw":
-            return "Zimababwe"
+            return "Zimbabwe"
             
         default:
             return "Sweden"
