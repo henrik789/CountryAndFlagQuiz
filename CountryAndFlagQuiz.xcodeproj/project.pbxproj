@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF0891C4242F4A3000318B9A /* CountryAndFlagQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryAndFlagQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0891C4242F4A3000318B9A /* Vexilloquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vexilloquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0891C7242F4A3000318B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0891C9242F4A3000318B9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF0891CB242F4A3000318B9A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF017AE72463EBC500660C3D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */,
+				AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AF0891BB242F4A3000318B9A = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +93,7 @@
 		AF0891C5242F4A3000318B9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF0891C4242F4A3000318B9A /* CountryAndFlagQuiz.app */,
+				AF0891C4242F4A3000318B9A /* Vexilloquiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +121,7 @@
 				AFE1BD6A243E0BF600168AF2 /* StartVC */,
 				AFE1BD6B243E0C1500168AF2 /* QuizVC */,
 				AFE1BD6C243E0C2900168AF2 /* TimeQuizVC */,
+				AF017AE72463EBC500660C3D /* Settings */,
 				AFE1BD6D243E0C3900168AF2 /* CountriesVC */,
 			);
 			path = ViewControllers;
@@ -153,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				AF0891CD242F4A3000318B9A /* SecondViewController.swift */,
-				AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */,
 			);
 			path = QuizVC;
 			sourceTree = "<group>";
@@ -162,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				AF264087243093F60031F1AC /* ThirdViewController.swift */,
-				AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */,
 			);
 			path = TimeQuizVC;
 			sourceTree = "<group>";
@@ -194,7 +202,7 @@
 			);
 			name = CountryAndFlagQuiz;
 			productName = CountryAndFlagQuiz;
-			productReference = AF0891C4242F4A3000318B9A /* CountryAndFlagQuiz.app */;
+			productReference = AF0891C4242F4A3000318B9A /* Vexilloquiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "se.henriklarsson-.CountryAndFlagQuiz";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Vexilloquiz;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -440,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "se.henriklarsson-.CountryAndFlagQuiz";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Vexilloquiz;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

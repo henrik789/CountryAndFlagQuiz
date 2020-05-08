@@ -40,19 +40,15 @@ class ThirdViewController: UIViewController {
 //        navigationController?.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.isHidden = true
         self.title = "Time Challenge"
-        labelTop.layer.cornerRadius = 10
+//        labelTop.layer.cornerRadius = 10
         labelTop.adjustsFontSizeToFitWidth = true
         labelTop.layer.masksToBounds = true
         labelTop.text = "Country 1"
-        labelBottom.layer.cornerRadius = 10
+//        labelBottom.layer.cornerRadius = 10
         labelBottom.adjustsFontSizeToFitWidth = true
         labelBottom.layer.masksToBounds = true
         labelBottom.text = "Country 2"
-        flagImageView.image = UIImage(named: "newFlag_trans.png")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
+        flagImageView.image = UIImage(named: "vexi_logo.png")
     }
     
     func config() {

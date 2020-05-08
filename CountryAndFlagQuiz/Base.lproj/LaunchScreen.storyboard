@@ -17,18 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flag &amp; Country Quiz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-5i-dDx">
-                                <rect key="frame" x="20.5" y="434.5" width="373" height="37"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
-                                <color key="textColor" name="Blueish"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz of Flags &amp; Countries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-5i-dDx">
+                                <rect key="frame" x="62.5" y="438" width="289" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" name="Whiteish"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="Whiteish"/>
+                        <color key="backgroundColor" name="Blueish"/>
                         <constraints>
-                            <constraint firstItem="sOn-5i-dDx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CeC-3c-0t9"/>
-                            <constraint firstItem="sOn-5i-dDx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="D0Z-Tx-jiS"/>
-                            <constraint firstItem="sOn-5i-dDx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DWi-DC-oAM"/>
+                            <constraint firstItem="sOn-5i-dDx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Dds-qp-Eaj"/>
+                            <constraint firstItem="sOn-5i-dDx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hbk-4I-ceq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -321,7 +321,10 @@ class SecondViewController: UIViewController {
     
     func winAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
+//            self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
+            self.pointsLabel.layer.cornerRadius = 7
         })
         UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1, y: 1)

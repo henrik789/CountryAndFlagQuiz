@@ -5,7 +5,6 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var subHead: UILabel!
-    @IBOutlet weak var headline: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
     
     
@@ -14,9 +13,8 @@ class FirstViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        headline.fontSizeAdjust(Adjustratio: "large")
         topLabel.fontSizeAdjust(Adjustratio: "small")
-        subHead.fontSizeAdjust(Adjustratio: "medium")
+        subHead.fontSizeAdjust(Adjustratio: "small")
         bottomLabel.fontSizeAdjust(Adjustratio: "small")
     }
 

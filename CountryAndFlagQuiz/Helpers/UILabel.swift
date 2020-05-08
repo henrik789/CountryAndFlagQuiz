@@ -15,13 +15,13 @@ extension UILabel {
             switch Adjustratio {
             case "small":
                 print("small")
-                return font = font.withSize(15)
+                return font = font.withSize(14)
             case "medium":
                 print("med")
                 return font = font.withSize(17)
             case "large":
                 print("large")
-                return font = font.withSize(39)
+                return font = font.withSize(20)
             default:
                 return font = font.withSize(16)
             }
@@ -32,7 +32,7 @@ extension UILabel {
             case "medium":
                 return font = font.withSize(19)
             case "large":
-                return font = font.withSize(41)
+                return font = font.withSize(24)
             default:
                 return font = font.withSize(16)
             }
@@ -44,7 +44,7 @@ extension UILabel {
             case "medium":
                 return font = font.withSize(20)
             case "large":
-                return font = font.withSize(42)
+                return font = font.withSize(26)
             default:
                 return font = font.withSize(16)
             }
