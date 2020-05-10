@@ -18,7 +18,7 @@ class ThirdViewController: UIViewController {
     var right = false
     var points: Int = 0
     var flagCounter = 0
-    var countdownTimer: Timer!
+    var countdownTimer: Timer?
     var totalTime = 10
     var timeFromStart:Int = 0
     var storageController = StorageController()
@@ -34,44 +34,41 @@ class ThirdViewController: UIViewController {
         view.bringSubviewToFront(flagImageView)
         mainButton.mainStyle()
         mainButton.setTitle("Start", for: .normal)
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.isTranslucent = true
-//        navigationController?.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.isHidden = true
         self.title = "Time Challenge"
-//        labelTop.layer.cornerRadius = 10
         labelTop.adjustsFontSizeToFitWidth = true
         labelTop.layer.masksToBounds = true
         labelTop.text = "Country 1"
-//        labelBottom.layer.cornerRadius = 10
         labelBottom.adjustsFontSizeToFitWidth = true
         labelBottom.layer.masksToBounds = true
         labelBottom.text = "Country 2"
         flagImageView.image = UIImage(named: "vexi_logo.png")
     }
     
+    
     func config() {
-
         guard let user = StorageController.shared.fetchUser() else { return }
         totalTime = user.timeCount
         timeFromStart = user.timeCount
         highscore = user.percentTimeQuiz
+        points = 0
+        flagCounter = 0
         timeLabel.text = "Time: \(timeFormatted(totalTime))"
         pointsLabel.text = "Points: \(points)"
         progress = Progress(totalUnitCount: Int64(totalTime))
         countryList = getFlags.readJSONFromFile()
-        points = 0
-        flagCounter = 0
+        
         progressView.progress = 0
         startNewGame()
+        setupLabelTap()
         startTimer()
+        mainButton.setTitle("Restart", for: .normal)
     }
     
     // Game ******************************************************************************************************
     
     func startNewGame() {
-        setupLabelTap()
+        
         let randomCountry = Int.random(in: 0..<countryList.count)
         var fakeCountry = Int.random(in: 0..<countryList.count)
         while fakeCountry == randomCountry {
@@ -80,7 +77,10 @@ class ThirdViewController: UIViewController {
         
         var flag = countryList[randomCountry].flagUrl
         flag = flag.replacingOccurrences(of: ".", with: "")
-        flagImageView.image = UIImage(named: "\(flag).png") ?? UIImage(named: "logoShape_Blue.png")
+        if let imageToShow = UIImage(named: "\(flag).png") {
+            flagImageView.image = imageToShow
+        }
+        
         if randomCountry % 2 == 0 {
             labelTop.text = "Capital: \(countryList[randomCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[randomCountry].population))"
             labelBottom.text = "Capital: \(countryList[fakeCountry].capital) \n Population: \(formatNumber(bigNumber: countryList[fakeCountry].population))"
@@ -93,7 +93,7 @@ class ThirdViewController: UIViewController {
             countryList.remove(at: randomCountry)
         }
         flagCounter += 1
-        mainButton.setTitle("Restart", for: .normal)
+        
     }
     
     func setupLabelTap() {
@@ -137,8 +137,9 @@ class ThirdViewController: UIViewController {
     
     // Timer ************************************************************************************************
     func startTimer() {
+        guard countdownTimer == nil else {return}
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        countdownTimer.tolerance  = 0.1
+        countdownTimer?.tolerance  = 0.3
     }
     
     @objc func updateTime() {
@@ -148,38 +149,47 @@ class ThirdViewController: UIViewController {
             timeLabel.text = "Time: \(timeFormatted(totalTime))"
         } else {
             endTimer()
+            endGame()
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if countdownTimer != nil {
-            if countdownTimer.isValid {
-                countdownTimer.invalidate()
-                print("view disappear")
-            }
+            countdownTimer?.invalidate()
+            countdownTimer = nil
         }
     }
     
     func endTimer() {
+        if countdownTimer != nil {
+            countdownTimer?.invalidate()
+            countdownTimer = nil
+        }
+    }
+    
+    func endGame() {
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent
         formatter.multiplier = 100
         formatter.minimumIntegerDigits = 1
         formatter.maximumIntegerDigits = 3
         formatter.maximumFractionDigits = 2
-        let percent = formatter.string(from: NSNumber(value: Float(points) / Float(flagCounter)))
-        winPercent = 100 * (Float(points) / Float(flagCounter))
-        countdownTimer.invalidate()
-        mainButton.setTitle("Try Again", for: .selected)
-        labelTop.text = "You scored \(points)/\(flagCounter) points in \(timeFromStart) seconds. \n Correct answers: \(percent!)"
+        let percent = formatter.string(from: NSNumber(value: Float(points) / Float(flagCounter - 1)))
+        winPercent = 100 * (Float(points) / Float(flagCounter - 1))
+        mainButton.setTitle("Try Again", for: .normal)
+        if points > 0 {
+            labelTop.text = "You scored \(points)/\(flagCounter - 1) points in \(timeFromStart) seconds. \n Correct answers: \(percent!)"
+            
+        } else {
+            labelTop.text = "You scored \(points)/\(flagCounter - 1) points in \(timeFromStart) seconds. \n Correct answers: 0"
+        }
         labelBottom.isUserInteractionEnabled = false
         labelTop.isUserInteractionEnabled = false
-        flagImageView.image = UIImage(named: "logoShape_Blue.png")
-        if winPercent > highscore {
+        flagImageView.image = UIImage(named: "vexi_logo.png")
+        if winPercent > highscore  && flagCounter >= 4 {
             save()
         }
     }
-    
     
     func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
@@ -188,17 +198,9 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func startGamePressed(_ sender: UIButton) {
-        if countdownTimer == nil {
-            config()
-        }else {
-            if countdownTimer.isValid {
-                endTimer()
-                print(countdownTimer.isValid)
-            }
-            print("new game")
-            config()
-        }
-        //        config()
+        endTimer()
+        endGame()
+        config()
     }
     
     func save() {
@@ -210,12 +212,11 @@ class ThirdViewController: UIViewController {
     func winAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
-            self.pointsLabel.layer.cornerRadius = 7
+            self.pointsLabel.layer.cornerRadius = 8
         })
         UIView.animate(withDuration: 0.1, delay: 0.2, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.pointsLabel.layer.backgroundColor = UIColor.clear.cgColor
+            self.pointsLabel.layer.cornerRadius = 0
         })
     }
     

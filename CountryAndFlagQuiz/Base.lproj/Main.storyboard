@@ -28,11 +28,11 @@
                                         <rect key="frame" x="0.0" y="542" width="414" height="271"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ecv-Od-bZX">
-                                                <rect key="frame" x="20.5" y="89" width="373" height="93"/>
+                                                <rect key="frame" x="20.5" y="77.5" width="373" height="116.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="7qp-ge-AxG"/>
                                                 </constraints>
-                                                <string key="text">In the time challenge you can exerrcise your geography knowledge. In thte first quiz your task is to match the given flag with one of  four options to choose from.</string>
+                                                <string key="text">In Time Challenge, each label contains information about a country. You should choose the label that matches the flag. You can choose how long countdown you want on the Settings tab.</string>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" name="Whiteish"/>
                                                 <nil key="highlightedColor"/>
@@ -49,8 +49,8 @@
                                         <rect key="frame" x="0.0" y="271" width="414" height="271"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                                <rect key="frame" x="20.5" y="89" width="373" height="93"/>
-                                                <string key="text">In this quiz you can exerrcise your geography knowledge. In thte first quiz your task is to match the given flag with one of  four options to choose from.</string>
+                                                <rect key="frame" x="20.5" y="77.5" width="373" height="116.5"/>
+                                                <string key="text">In Flag Quiz your task is to match the given flag with one of  four options to choose from. There are flags from 200 countries in this app.  You can adjust how many flags you want in this quiz in the settings tab.</string>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" name="ButtonTint"/>
                                                 <nil key="highlightedColor"/>
@@ -66,8 +66,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-kI-sf5" userLabel="View1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vexillology is the study of flags and this quiz will test you on flags &amp; countries from all over the world." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                                <rect key="frame" x="20.5" y="67" width="373" height="137"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vexilloquiz will test you on flags and countries from all over the world." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                                <rect key="frame" x="20.5" y="84.5" width="373" height="102.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="25"/>
                                                 <color key="textColor" name="Whiteish"/>
                                                 <nil key="highlightedColor"/>
@@ -129,11 +129,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-4M-jFe">
-                                <rect key="frame" x="0.0" y="102" width="414" height="30"/>
+                                <rect key="frame" x="8.5" y="102" width="397" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njw-DF-2kD">
-                                        <rect key="frame" x="12" y="0.0" width="390" height="30"/>
-                                        <color key="backgroundColor" name="GreyThree"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="30"/>
+                                        <color key="backgroundColor" name="GreyOne"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Restart">
                                             <color key="titleColor" name="Whiteish"/>
@@ -144,127 +144,94 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Njw-DF-2kD" firstAttribute="centerX" secondItem="Bgc-4M-jFe" secondAttribute="centerX" id="LU0-Oo-P8D"/>
                                     <constraint firstItem="Njw-DF-2kD" firstAttribute="height" secondItem="Bgc-4M-jFe" secondAttribute="height" id="WFU-8x-7nA"/>
                                     <constraint firstItem="Njw-DF-2kD" firstAttribute="centerY" secondItem="Bgc-4M-jFe" secondAttribute="centerY" id="h1t-0v-Rl6"/>
+                                    <constraint firstItem="Njw-DF-2kD" firstAttribute="width" secondItem="Bgc-4M-jFe" secondAttribute="width" id="nR2-Pz-6Q1"/>
                                     <constraint firstAttribute="height" constant="30" id="uZg-iE-dkW"/>
-                                    <constraint firstItem="Njw-DF-2kD" firstAttribute="leading" secondItem="Bgc-4M-jFe" secondAttribute="leading" constant="12" id="zBb-sW-Wsy"/>
-                                    <constraint firstAttribute="trailing" secondItem="Njw-DF-2kD" secondAttribute="trailing" constant="12" id="zz1-Bh-tWv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-To-3Pf">
-                                <rect key="frame" x="0.0" y="138.5" width="414" height="30"/>
+                                <rect key="frame" x="8.5" y="138.5" width="397" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flags: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87D-0d-mbX">
-                                        <rect key="frame" x="12" y="0.0" width="190.5" height="30"/>
-                                        <color key="backgroundColor" name="GreyTwo"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" name="Whiteish"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-0O-65q">
-                                        <rect key="frame" x="211.5" y="0.0" width="190.5" height="30"/>
-                                        <color key="backgroundColor" name="GreyTwo"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" name="Whiteish"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-M1-jTR">
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Flags: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87D-0d-mbX">
+                                                <rect key="frame" x="0.0" y="0.0" width="197.5" height="30"/>
+                                                <color key="backgroundColor" name="GreyTwo"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <color key="textColor" name="Whiteish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-0O-65q">
+                                                <rect key="frame" x="199.5" y="0.0" width="197.5" height="30"/>
+                                                <color key="backgroundColor" name="GreyTwo"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <color key="textColor" name="Whiteish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="87D-0d-mbX" firstAttribute="leading" secondItem="5ud-To-3Pf" secondAttribute="leading" constant="12" id="51I-xP-lRE"/>
-                                    <constraint firstItem="nvR-0O-65q" firstAttribute="centerY" secondItem="5ud-To-3Pf" secondAttribute="centerY" id="HAZ-ON-fZV"/>
-                                    <constraint firstItem="nvR-0O-65q" firstAttribute="width" secondItem="5ud-To-3Pf" secondAttribute="width" multiplier="0.46" id="JhU-nt-ZV9"/>
-                                    <constraint firstAttribute="trailing" secondItem="nvR-0O-65q" secondAttribute="trailing" constant="12" id="Vtf-u2-7s4"/>
-                                    <constraint firstItem="87D-0d-mbX" firstAttribute="centerY" secondItem="5ud-To-3Pf" secondAttribute="centerY" id="WzW-l9-nP2"/>
-                                    <constraint firstItem="nvR-0O-65q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="87D-0d-mbX" secondAttribute="trailing" constant="8" symbolic="YES" id="X0r-Oj-H0y"/>
-                                    <constraint firstItem="nvR-0O-65q" firstAttribute="height" secondItem="5ud-To-3Pf" secondAttribute="height" id="k9T-l3-3vU"/>
-                                    <constraint firstItem="87D-0d-mbX" firstAttribute="height" secondItem="5ud-To-3Pf" secondAttribute="height" id="obo-gG-PYe"/>
-                                    <constraint firstItem="87D-0d-mbX" firstAttribute="width" secondItem="5ud-To-3Pf" secondAttribute="width" multiplier="0.46" id="wZe-tU-fdL"/>
+                                    <constraint firstItem="jFx-M1-jTR" firstAttribute="centerY" secondItem="5ud-To-3Pf" secondAttribute="centerY" id="CYn-T4-b5J"/>
+                                    <constraint firstItem="jFx-M1-jTR" firstAttribute="height" secondItem="5ud-To-3Pf" secondAttribute="height" id="LHr-rq-wxA"/>
+                                    <constraint firstItem="jFx-M1-jTR" firstAttribute="centerX" secondItem="5ud-To-3Pf" secondAttribute="centerX" id="Sfr-xM-0FJ"/>
+                                    <constraint firstItem="jFx-M1-jTR" firstAttribute="width" secondItem="5ud-To-3Pf" secondAttribute="width" id="uZh-aH-uxu"/>
                                     <constraint firstAttribute="height" constant="30" id="zOO-bM-FMt"/>
                                 </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLu-dA-ysu">
-                                <rect key="frame" x="8.5" y="171.5" width="397" height="2"/>
+                                <rect key="frame" x="16" y="171.5" width="382" height="2"/>
                                 <color key="progressTintColor" name="Blueish"/>
-                                <color key="trackTintColor" name="Indigo"/>
                             </progressView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="af" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-yF-m1b">
-                                <rect key="frame" x="16.5" y="191.5" width="381" height="334.5"/>
+                                <rect key="frame" x="24" y="191.5" width="366" height="322.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-5v-YO6">
-                                <rect key="frame" x="16.5" y="564" width="381" height="229"/>
+                                <rect key="frame" x="24" y="552" width="366" height="229"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Eh-g9b">
-                                        <rect key="frame" x="0.0" y="0.0" width="381" height="37"/>
-                                        <color key="backgroundColor" name="Whiteish"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="37"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" name="ButtonTint"/>
+                                            <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="landOne:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="AZ1-zy-Um4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICr-fp-oEh">
-                                        <rect key="frame" x="0.0" y="64" width="381" height="37"/>
-                                        <color key="backgroundColor" name="Whiteish"/>
+                                        <rect key="frame" x="0.0" y="64" width="366" height="37"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" name="ButtonTint"/>
+                                            <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="landTwo:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="nuO-V6-mRn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-MU-PTe">
-                                        <rect key="frame" x="0.0" y="128" width="381" height="37"/>
-                                        <color key="backgroundColor" name="Whiteish"/>
+                                        <rect key="frame" x="0.0" y="128" width="366" height="37"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" name="ButtonTint"/>
+                                            <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="landFour:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cBw-xd-0gu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thu-BN-Wqw">
-                                        <rect key="frame" x="0.0" y="192" width="381" height="37"/>
-                                        <color key="backgroundColor" name="Whiteish"/>
+                                        <rect key="frame" x="0.0" y="192" width="366" height="37"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" name="ButtonTint"/>
+                                            <color key="titleColor" name="Whiteish"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="landThree:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6eX-YF-EKS"/>
                                         </connections>
@@ -279,8 +246,8 @@
                             <constraint firstItem="2qZ-5v-YO6" firstAttribute="width" secondItem="5ud-To-3Pf" secondAttribute="width" multiplier="0.92" id="8bu-0D-UEB"/>
                             <constraint firstItem="Bgc-4M-jFe" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="Cy0-Fg-n2E"/>
                             <constraint firstAttribute="bottom" secondItem="agn-z6-CSH" secondAttribute="bottom" id="Dhe-RB-7sh"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="2qZ-5v-YO6" secondAttribute="bottom" constant="20" id="DwS-5W-lKX"/>
-                            <constraint firstItem="5ud-To-3Pf" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="ETk-gE-xgJ"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="2qZ-5v-YO6" secondAttribute="bottom" constant="32" id="DwS-5W-lKX"/>
+                            <constraint firstItem="5ud-To-3Pf" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.96" id="ETk-gE-xgJ"/>
                             <constraint firstItem="CLu-dA-ysu" firstAttribute="width" secondItem="5ud-To-3Pf" secondAttribute="width" multiplier="0.96" id="FnX-3u-GBG"/>
                             <constraint firstItem="5ud-To-3Pf" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="GOm-U1-SFV"/>
                             <constraint firstItem="iIs-yF-m1b" firstAttribute="top" secondItem="CLu-dA-ysu" secondAttribute="bottom" constant="18" id="KZ6-je-08L"/>
@@ -289,7 +256,7 @@
                             <constraint firstItem="iIs-yF-m1b" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="bRa-9Q-ol7"/>
                             <constraint firstItem="agn-z6-CSH" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="eqj-hh-uCD"/>
                             <constraint firstItem="2qZ-5v-YO6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iIs-yF-m1b" secondAttribute="bottom" constant="38" id="eqq-BG-xMz"/>
-                            <constraint firstItem="Bgc-4M-jFe" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="hcV-of-WXT"/>
+                            <constraint firstItem="Bgc-4M-jFe" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="0.96" id="hcV-of-WXT"/>
                             <constraint firstItem="agn-z6-CSH" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="khR-rc-myD"/>
                             <constraint firstItem="5ud-To-3Pf" firstAttribute="top" secondItem="Bgc-4M-jFe" secondAttribute="bottom" multiplier="1.05" id="qc3-tz-3q6"/>
                             <constraint firstItem="2qZ-5v-YO6" firstAttribute="width" secondItem="iIs-yF-m1b" secondAttribute="width" id="w8u-zr-oXu"/>
@@ -328,11 +295,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9US-Nt-g2F">
-                                <rect key="frame" x="0.0" y="102" width="414" height="32"/>
+                                <rect key="frame" x="8.5" y="102" width="397" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V51-Vj-ZKc">
-                                        <rect key="frame" x="12" y="0.0" width="390" height="32"/>
-                                        <color key="backgroundColor" name="GreyThree"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="32"/>
+                                        <color key="backgroundColor" name="GreyOne"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Restart">
                                             <color key="titleColor" name="Whiteish"/>
@@ -343,42 +310,42 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="V51-Vj-ZKc" firstAttribute="leading" secondItem="9US-Nt-g2F" secondAttribute="leading" constant="12" id="0VF-AU-v29"/>
+                                    <constraint firstItem="V51-Vj-ZKc" firstAttribute="width" secondItem="9US-Nt-g2F" secondAttribute="width" id="Bk7-6Y-7ux"/>
                                     <constraint firstAttribute="height" constant="32" id="LtB-ni-WYl"/>
                                     <constraint firstItem="V51-Vj-ZKc" firstAttribute="height" secondItem="9US-Nt-g2F" secondAttribute="height" id="bBq-zZ-P11"/>
                                     <constraint firstItem="V51-Vj-ZKc" firstAttribute="centerY" secondItem="9US-Nt-g2F" secondAttribute="centerY" id="bHp-07-22s"/>
-                                    <constraint firstAttribute="trailing" secondItem="V51-Vj-ZKc" secondAttribute="trailing" constant="12" id="oBc-h0-2dg"/>
+                                    <constraint firstItem="V51-Vj-ZKc" firstAttribute="centerX" secondItem="9US-Nt-g2F" secondAttribute="centerX" id="vc9-ka-49R"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1N-Yw-ITg">
-                                <rect key="frame" x="0.0" y="140.5" width="414" height="32"/>
+                                <rect key="frame" x="8.5" y="140.5" width="397" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-9z-v0S">
-                                        <rect key="frame" x="12" y="0.0" width="190.5" height="32"/>
-                                        <color key="backgroundColor" name="GreyTwo"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                        <color key="textColor" name="Whiteish"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-Tt-6Ve">
-                                        <rect key="frame" x="211.5" y="0.0" width="190.5" height="32"/>
-                                        <color key="backgroundColor" name="GreyTwo"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                        <color key="textColor" name="Whiteish"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-YI-F7K">
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-9z-v0S">
+                                                <rect key="frame" x="0.0" y="0.0" width="197.5" height="32"/>
+                                                <color key="backgroundColor" name="GreyTwo"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <color key="textColor" name="Whiteish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-Tt-6Ve">
+                                                <rect key="frame" x="199.5" y="0.0" width="197.5" height="32"/>
+                                                <color key="backgroundColor" name="GreyTwo"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                <color key="textColor" name="Whiteish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="PN0-9z-v0S" firstAttribute="leading" secondItem="J1N-Yw-ITg" secondAttribute="leading" constant="12" id="18l-tw-YoK"/>
-                                    <constraint firstItem="PN0-9z-v0S" firstAttribute="height" secondItem="J1N-Yw-ITg" secondAttribute="height" id="9cU-SY-75Z"/>
-                                    <constraint firstItem="qe7-Tt-6Ve" firstAttribute="width" secondItem="J1N-Yw-ITg" secondAttribute="width" multiplier="0.46" id="Edg-ri-Tf8"/>
-                                    <constraint firstItem="qe7-Tt-6Ve" firstAttribute="height" secondItem="J1N-Yw-ITg" secondAttribute="height" id="Olz-mN-ELh"/>
-                                    <constraint firstItem="PN0-9z-v0S" firstAttribute="centerY" secondItem="J1N-Yw-ITg" secondAttribute="centerY" id="TTh-Bf-60T"/>
-                                    <constraint firstItem="PN0-9z-v0S" firstAttribute="width" secondItem="J1N-Yw-ITg" secondAttribute="width" multiplier="0.46" id="bXh-wb-s3O"/>
+                                    <constraint firstItem="Wde-YI-F7K" firstAttribute="centerY" secondItem="J1N-Yw-ITg" secondAttribute="centerY" id="BuL-Tx-2ip"/>
+                                    <constraint firstItem="Wde-YI-F7K" firstAttribute="centerX" secondItem="J1N-Yw-ITg" secondAttribute="centerX" id="EbX-Ux-m2E"/>
+                                    <constraint firstItem="Wde-YI-F7K" firstAttribute="width" secondItem="J1N-Yw-ITg" secondAttribute="width" id="Tge-xs-JcQ"/>
                                     <constraint firstAttribute="height" constant="32" id="gAg-2w-XqR"/>
-                                    <constraint firstItem="qe7-Tt-6Ve" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PN0-9z-v0S" secondAttribute="trailing" constant="8" symbolic="YES" id="giX-JK-rDX"/>
-                                    <constraint firstAttribute="trailing" secondItem="qe7-Tt-6Ve" secondAttribute="trailing" constant="12" id="nLH-uf-ceX"/>
-                                    <constraint firstItem="qe7-Tt-6Ve" firstAttribute="centerY" secondItem="J1N-Yw-ITg" secondAttribute="centerY" id="vhC-AQ-cjU"/>
+                                    <constraint firstItem="Wde-YI-F7K" firstAttribute="height" secondItem="J1N-Yw-ITg" secondAttribute="height" id="noa-Pq-Bfz"/>
                                 </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-ft-xma">
@@ -390,18 +357,10 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iz-Bu-hZH">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="131.5"/>
-                                        <color key="backgroundColor" name="Beigey"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" name="ButtonTint"/>
+                                        <color key="textColor" name="Whiteish"/>
                                         <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-1G-JZi">
                                         <rect key="frame" x="0.0" y="143.5" width="373" height="286.5"/>
@@ -411,18 +370,10 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Y1-iPA">
                                         <rect key="frame" x="0.0" y="442" width="373" height="131.5"/>
-                                        <color key="backgroundColor" name="Beigey"/>
+                                        <color key="backgroundColor" name="GreyThree"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" name="ButtonTint"/>
+                                        <color key="textColor" name="Whiteish"/>
                                         <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="Greyish"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -435,7 +386,7 @@
                         <color key="backgroundColor" name="Browney"/>
                         <constraints>
                             <constraint firstItem="J1N-Yw-ITg" firstAttribute="top" secondItem="9US-Nt-g2F" secondAttribute="bottom" multiplier="1.05" id="10h-0e-5I4"/>
-                            <constraint firstItem="9US-Nt-g2F" firstAttribute="width" secondItem="wU1-V5-VdN" secondAttribute="width" id="8EK-dC-c4S"/>
+                            <constraint firstItem="9US-Nt-g2F" firstAttribute="width" secondItem="wU1-V5-VdN" secondAttribute="width" multiplier="0.96" id="8EK-dC-c4S"/>
                             <constraint firstItem="JlK-ft-xma" firstAttribute="top" secondItem="J1N-Yw-ITg" secondAttribute="bottom" constant="5" id="8j8-CK-SjC"/>
                             <constraint firstItem="oH0-98-32R" firstAttribute="top" secondItem="JlK-ft-xma" secondAttribute="bottom" constant="20" id="JeH-3O-Hy9"/>
                             <constraint firstAttribute="bottom" secondItem="9k8-l6-SeW" secondAttribute="bottom" id="M0v-fv-1o9"/>
@@ -445,9 +396,9 @@
                             <constraint firstItem="9k8-l6-SeW" firstAttribute="trailing" secondItem="sUv-a7-VSZ" secondAttribute="trailing" id="dMG-DJ-AbS"/>
                             <constraint firstItem="9k8-l6-SeW" firstAttribute="leading" secondItem="sUv-a7-VSZ" secondAttribute="leading" id="f8W-gh-4dh"/>
                             <constraint firstItem="oH0-98-32R" firstAttribute="bottom" secondItem="sUv-a7-VSZ" secondAttribute="bottom" constant="-40" id="ig4-5y-8rE"/>
-                            <constraint firstItem="J1N-Yw-ITg" firstAttribute="width" secondItem="wU1-V5-VdN" secondAttribute="width" id="mVM-Ek-3kR"/>
+                            <constraint firstItem="J1N-Yw-ITg" firstAttribute="width" secondItem="wU1-V5-VdN" secondAttribute="width" multiplier="0.96" id="mVM-Ek-3kR"/>
                             <constraint firstItem="9US-Nt-g2F" firstAttribute="top" secondItem="sUv-a7-VSZ" secondAttribute="top" constant="14" id="oBO-Rg-cJI"/>
-                            <constraint firstItem="JlK-ft-xma" firstAttribute="width" secondItem="J1N-Yw-ITg" secondAttribute="width" multiplier="0.96" id="ohT-1q-OeL"/>
+                            <constraint firstItem="JlK-ft-xma" firstAttribute="width" secondItem="J1N-Yw-ITg" secondAttribute="width" id="ohT-1q-OeL"/>
                             <constraint firstItem="J1N-Yw-ITg" firstAttribute="centerX" secondItem="sUv-a7-VSZ" secondAttribute="centerX" id="sm8-Tg-cez"/>
                             <constraint firstItem="9US-Nt-g2F" firstAttribute="centerX" secondItem="sUv-a7-VSZ" secondAttribute="centerX" id="tB8-4f-YoE"/>
                             <constraint firstItem="JlK-ft-xma" firstAttribute="centerX" secondItem="J1N-Yw-ITg" secondAttribute="centerX" id="zbn-yh-Din"/>
@@ -523,14 +474,14 @@
                                                 <rect key="frame" x="0.0" y="53.5" width="373" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Gss-Tg-9C9">
-                                                        <rect key="frame" x="-2" y="0.0" width="328" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="367" height="31"/>
                                                         <color key="tintColor" name="ButtonTint"/>
                                                         <connections>
                                                             <action selector="sliderA:" destination="3jz-Ds-hoY" eventType="valueChanged" id="ZIh-I0-ztQ"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koe-aH-LVq">
-                                                        <rect key="frame" x="334" y="0.0" width="39" height="30"/>
+                                                        <rect key="frame" x="373" y="0.0" width="0.0" height="30"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                         <color key="textColor" name="Whiteish"/>
                                                         <nil key="highlightedColor"/>
@@ -576,21 +527,21 @@
                                                 <rect key="frame" x="0.0" y="53.5" width="382" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="10" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="MaY-db-aRB">
-                                                        <rect key="frame" x="-2" y="0.0" width="337" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="376" height="31"/>
                                                         <color key="tintColor" name="ButtonTint"/>
                                                         <connections>
                                                             <action selector="sliderB:" destination="3jz-Ds-hoY" eventType="valueChanged" id="MBb-Qw-1p0"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-xv-CS7">
-                                                        <rect key="frame" x="343" y="0.0" width="39" height="30"/>
+                                                        <rect key="frame" x="382" y="0.0" width="0.0" height="30"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                         <color key="textColor" name="Whiteish"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erl-uz-h5a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erl-uz-h5a">
                                                 <rect key="frame" x="0.0" y="113.5" width="382" height="25"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                 <color key="textColor" name="Whiteish"/>
@@ -705,15 +656,12 @@
         <image name="SettingsItem" width="25" height="25"/>
         <image name="ad" width="580" height="406"/>
         <image name="af" width="580" height="387"/>
-        <image name="bg1" width="645" height="1340.5"/>
+        <image name="bg1" width="732.5" height="1340.5"/>
         <image name="bg2" width="645" height="1340.5"/>
         <image name="flagABar" width="25" height="25"/>
         <image name="flagBBar" width="25" height="25"/>
         <image name="homeBarItem" width="25" height="25"/>
         <image name="sky" width="3803" height="5704"/>
-        <namedColor name="Beigey">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Blueish">
             <color red="0.050980392156862744" green="0.27843137254901962" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -723,14 +671,14 @@
         <namedColor name="ButtonTint">
             <color red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="GreyOne">
+            <color red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GreyThree">
             <color red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GreyTwo">
             <color red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Greyish">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Indigo">
             <color red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

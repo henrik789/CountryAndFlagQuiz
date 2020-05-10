@@ -46,7 +46,8 @@ class SettingsFlagViewController: UIViewController {
         timeNumber = user?.timeCount ?? 30
         labelD.text = String(timeNumber)
         scoreTime = user?.percentTimeQuiz ?? 0
-        highscoreTime.text = "Highscore for TimeQuiz: \(scoreTime)%"
+        let twoDecimalPlaces = String(format: "%.2f", scoreTime)
+        highscoreTime.text = "Highscore (Min. 4 Countries): \(twoDecimalPlaces)%"
 
     }
     

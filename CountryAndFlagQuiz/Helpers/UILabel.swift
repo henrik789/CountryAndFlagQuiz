@@ -10,17 +10,13 @@ public var screenWidth: CGFloat {
 extension UILabel {
     
     func fontSizeAdjust(Adjustratio: String) {
-        print(screenHeight)
         if screenHeight < 600 {
             switch Adjustratio {
             case "small":
-                print("small")
                 return font = font.withSize(14)
             case "medium":
-                print("med")
                 return font = font.withSize(17)
             case "large":
-                print("large")
                 return font = font.withSize(20)
             default:
                 return font = font.withSize(16)

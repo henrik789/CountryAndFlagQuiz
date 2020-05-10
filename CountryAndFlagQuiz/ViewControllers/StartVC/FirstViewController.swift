@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         topLabel.fontSizeAdjust(Adjustratio: "small")
-        subHead.fontSizeAdjust(Adjustratio: "small")
+        subHead.fontSizeAdjust(Adjustratio: "medium")
         bottomLabel.fontSizeAdjust(Adjustratio: "small")
     }
 

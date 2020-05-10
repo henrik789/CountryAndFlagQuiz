@@ -74,7 +74,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         getFlags.buildArray()
         config()
-        animateGreeting()
     }
     
     
@@ -92,8 +91,6 @@ class SecondViewController: UIViewController {
         landTwo.commonStyle()
         landThre.commonStyle()
         landFour.commonStyle()
-        //        mainBtn.mainStyle()
-        //        settingsButton.mainStyle()
         pointsLabel.fontSizeAdjust(Adjustratio: "small")
         flagLabel.fontSizeAdjust(Adjustratio: "small")
         newFlag((Any).self)
@@ -178,7 +175,6 @@ class SecondViewController: UIViewController {
     func evaluate(button: UIButton) {
         if flagCounter <= flagLimit {
             view.isUserInteractionEnabled = false
-            print(self.view.isUserInteractionEnabled)
             if button.currentTitle == answer {
                 UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
                     button.backgroundColor = UIColor(named: "Greeney")
@@ -194,27 +190,25 @@ class SecondViewController: UIViewController {
                     if self.flagCounter != self.flagLimit {
                         self.newFlag((Any).self)
                     }
-                    button.backgroundColor = UIColor(named: "Beigey")
-                    button.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                    button.backgroundColor = UIColor(named: "GreyThree")
+                    button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     self.view.isUserInteractionEnabled = true
-                    print(self.view.isUserInteractionEnabled)
                 }
             }else { UIView.transition(with: button, duration: 0.3, options: .curveEaseOut, animations: {
                 button.backgroundColor = UIColor(named: "Redish")
                 button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
             })  { _ in
-                button.backgroundColor = UIColor(named: "Beigey")
-                button.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                button.backgroundColor = UIColor(named: "GreyThree")
+                button.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                 if self.randomNumber == 1 {
                     UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
                         self.landOne.backgroundColor = UIColor(named: "Greeney")
                         self.landOne.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     })  { _ in
                         self.newFlag((Any).self)
-                        self.landOne.backgroundColor = UIColor(named: "Beigey")
-                        self.landOne.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                        self.landOne.backgroundColor = UIColor(named: "GreyThree")
+                        self.landOne.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         self.view.isUserInteractionEnabled = true
-                        print(self.view.isUserInteractionEnabled)
                     }
                 } else if self.randomNumber == 2 {
                     UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
@@ -222,10 +216,9 @@ class SecondViewController: UIViewController {
                         self.landTwo.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     })  { _ in
                         self.newFlag((Any).self)
-                        self.landTwo.backgroundColor = UIColor(named: "Beigey")
-                        self.landTwo.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                        self.landTwo.backgroundColor = UIColor(named: "GreyThree")
+                        self.landTwo.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         self.view.isUserInteractionEnabled = true
-                        print(self.view.isUserInteractionEnabled)
                     }
                 }else if self.randomNumber == 3 {
                     UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
@@ -233,10 +226,9 @@ class SecondViewController: UIViewController {
                         self.landThre.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     })  { _ in
                         self.newFlag((Any).self)
-                        self.landThre.backgroundColor = UIColor(named: "Beigey")
-                        self.landThre.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                        self.landThre.backgroundColor = UIColor(named: "GreyThree")
+                        self.landThre.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         self.view.isUserInteractionEnabled = true
-                        print(self.view.isUserInteractionEnabled)
                     }
                 } else if self.randomNumber == 4 {
                     UIView.transition(with: button, duration: 0.8, options: .curveEaseOut, animations: {
@@ -244,10 +236,9 @@ class SecondViewController: UIViewController {
                         self.landFour.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                     })  { _ in
                         self.newFlag((Any).self)
-                        self.landFour.backgroundColor = UIColor(named: "Beigey")
-                        self.landFour.setTitleColor(UIColor(named: "ButtonTint"), for: .normal)
+                        self.landFour.backgroundColor = UIColor(named: "GreyThree")
+                        self.landFour.setTitleColor(UIColor(named: "Whiteish"), for: .normal)
                         self.view.isUserInteractionEnabled = true
-                        print(self.view.isUserInteractionEnabled)
                     }
                 }
                 }
@@ -266,37 +257,6 @@ class SecondViewController: UIViewController {
         let progressFloat = Float(progress.fractionCompleted)
         progressView.setProgress(progressFloat, animated: true)
     }
-    
-//    func startOver() {
-        //        pointsLabel.text = "Points: \(points)/\(flagLimit)"
-        //        timer.invalidate()
-//        let alert = UIAlertController(title: "Finished", message: "You have completed all flags. You scored \(points + 1) out of \(flagCounter).", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-//            switch action.style{
-//            case .default:
-//                self.navigationController?.popViewController(animated: true)
-//            case .cancel: break
-//
-//            case .destructive: break
-//
-//            @unknown default:
-//                fatalError()
-//            }}))
-//        alert.addAction(UIAlertAction(title: "New Game", style: .default, handler: { action in
-//            switch action.style{
-//            case .default:
-//                self.startFresh()
-//            case .cancel: break
-//
-//            case .destructive: break
-//
-//            @unknown default:
-//                fatalError()
-//            }}))
-//        self.present(alert, animated: true, completion: nil)
-//            animateGreeting()
-//
-//    }
     
     func save() {
         var user = StorageController.shared.fetchUser()
@@ -321,13 +281,13 @@ class SecondViewController: UIViewController {
     
     func winAnimation() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: {
-//            self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
-            self.pointsLabel.layer.cornerRadius = 7
+//            self.pointsLabel.layer.backgroundColor = UIColor(named: "Yellowish")?.cgColor
+            self.pointsLabel.layer.cornerRadius = 9
         })
         UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseInOut, animations: {
             self.pointsLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.pointsLabel.layer.cornerRadius = 0
         })
     }
     
