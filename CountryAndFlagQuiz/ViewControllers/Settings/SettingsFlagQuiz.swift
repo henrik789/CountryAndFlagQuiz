@@ -10,6 +10,10 @@ class SettingsFlagViewController: UIViewController {
     @IBOutlet weak var labelD: UILabel!
     @IBOutlet weak var sliderB: UISlider!
     @IBOutlet weak var highscoreTime: UILabel!
+    @IBOutlet weak var headerB: UILabel!
+    @IBOutlet weak var headerD: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
     
     var storageController = StorageController()
     var flagNumber = 40
@@ -17,6 +21,9 @@ class SettingsFlagViewController: UIViewController {
     var timeNumber = 30
     var scoreTime: Float = 1.0
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +55,16 @@ class SettingsFlagViewController: UIViewController {
         scoreTime = user?.percentTimeQuiz ?? 0
         let twoDecimalPlaces = String(format: "%.2f", scoreTime)
         highscoreTime.text = "Highscore (Min. 4 Countries): \(twoDecimalPlaces)%"
+        
+        labelB.fontSizeAdjust(Adjustratio: "small")
+        labelD.fontSizeAdjust(Adjustratio: "small")
+        highscoreFlag.fontSizeAdjust(Adjustratio: "small")
+        highscoreTime.fontSizeAdjust(Adjustratio: "small")
+        headerB.fontSizeAdjust(Adjustratio: "small")
+        headerD.fontSizeAdjust(Adjustratio: "small")
+        dismissBtn.titleLabel?.fontSizeAdjust(Adjustratio: "medium")
+        topLabel.fontSizeAdjust(Adjustratio: "x-small")
+        bottomLabel.fontSizeAdjust(Adjustratio: "x-small")
 
     }
     

@@ -12,10 +12,12 @@ extension UILabel {
     func fontSizeAdjust(Adjustratio: String) {
         if screenHeight < 600 {
             switch Adjustratio {
+            case "x-small":
+                return font = font.withSize(12)
             case "small":
                 return font = font.withSize(14)
             case "medium":
-                return font = font.withSize(17)
+                return font = font.withSize(16)
             case "large":
                 return font = font.withSize(20)
             default:
@@ -23,22 +25,25 @@ extension UILabel {
             }
         }else if screenHeight < 800 {
             switch Adjustratio {
+            case "x-small":
+                return font = font.withSize(14)
             case "small":
-                return font = font.withSize(16)
+                return font = font.withSize(15)
             case "medium":
-                return font = font.withSize(19)
+                return font = font.withSize(17)
             case "large":
                 return font = font.withSize(24)
             default:
                 return font = font.withSize(16)
             }
         } else {
-            print("big one")
             switch Adjustratio {
+            case "x-small":
+                return font = font.withSize(15)
             case "small":
-                return font = font.withSize(17)
+                return font = font.withSize(16)
             case "medium":
-                return font = font.withSize(20)
+                return font = font.withSize(19)
             case "large":
                 return font = font.withSize(26)
             default:

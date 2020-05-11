@@ -3,9 +3,9 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var topLabel: UILabel!
+//    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var subHead: UILabel!
-    @IBOutlet weak var bottomLabel: UILabel!
+//    @IBOutlet weak var bottomLabel: UILabel!
     
     
     override var prefersStatusBarHidden: Bool {
@@ -13,9 +13,9 @@ class FirstViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        topLabel.fontSizeAdjust(Adjustratio: "small")
-        subHead.fontSizeAdjust(Adjustratio: "medium")
-        bottomLabel.fontSizeAdjust(Adjustratio: "small")
+//        topLabel.fontSizeAdjust(Adjustratio: "small")
+        subHead.fontSizeAdjust(Adjustratio: "large")
+//        bottomLabel.fontSizeAdjust(Adjustratio: "small")
     }
 
     

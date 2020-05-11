@@ -43,6 +43,12 @@ class ThirdViewController: UIViewController {
         labelBottom.layer.masksToBounds = true
         labelBottom.text = "Country 2"
         flagImageView.image = UIImage(named: "vexi_logo.png")
+        mainButton.titleLabel?.fontSizeAdjust(Adjustratio: "small")
+        timeLabel.fontSizeAdjust(Adjustratio: "small")
+        pointsLabel.fontSizeAdjust(Adjustratio: "small")
+        labelTop.fontSizeAdjust(Adjustratio: "medium")
+        labelBottom.fontSizeAdjust(Adjustratio: "medium")
+        
     }
     
     
