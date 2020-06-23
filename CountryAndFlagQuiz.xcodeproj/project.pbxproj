@@ -9,19 +9,14 @@
 /* Begin PBXBuildFile section */
 		AF0891C8242F4A3000318B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0891C7242F4A3000318B9A /* AppDelegate.swift */; };
 		AF0891CA242F4A3000318B9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0891C9242F4A3000318B9A /* SceneDelegate.swift */; };
-		AF0891CC242F4A3000318B9A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0891CB242F4A3000318B9A /* FirstViewController.swift */; };
-		AF0891CE242F4A3000318B9A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0891CD242F4A3000318B9A /* SecondViewController.swift */; };
+		AF0891CE242F4A3000318B9A /* FlagQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0891CD242F4A3000318B9A /* FlagQuizViewController.swift */; };
 		AF0891D1242F4A3000318B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0891CF242F4A3000318B9A /* Main.storyboard */; };
 		AF0891D3242F4A3100318B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0891D2242F4A3100318B9A /* Assets.xcassets */; };
 		AF0891D6242F4A3100318B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0891D4242F4A3100318B9A /* LaunchScreen.storyboard */; };
 		AF1EEFE0245176DB00C70992 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEFDF245176DB00C70992 /* StorageController.swift */; };
 		AF1EEFE22451770800C70992 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EEFE12451770800C70992 /* User.swift */; };
-		AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264087243093F60031F1AC /* ThirdViewController.swift */; };
-		AF26408A243094040031F1AC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264089243094040031F1AC /* FourthViewController.swift */; };
-		AF3FE5F024498E2A00B56334 /* CountriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */; };
-		AF3FE5F124498E2A00B56334 /* CountriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */; };
+		AF264088243093F60031F1AC /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF264087243093F60031F1AC /* TimeViewController.swift */; };
 		AF8CEE032456C30D00B630A5 /* SettingsFlagQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */; };
-		AF8CEE052456C7A300B630A5 /* SettingsTimeQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */; };
 		AFB3043C2445F32000FAD5C0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3043B2445F32000FAD5C0 /* Views.swift */; };
 		AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */ = {isa = PBXBuildFile; fileRef = AFE1BD59243E095400168AF2 /* countriesDict.json */; };
 		AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE1BD5B243E0B6700168AF2 /* Country.swift */; };
@@ -37,20 +32,15 @@
 		AF0891C4242F4A3000318B9A /* Vexilloquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vexilloquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0891C7242F4A3000318B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0891C9242F4A3000318B9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF0891CB242F4A3000318B9A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		AF0891CD242F4A3000318B9A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AF0891CD242F4A3000318B9A /* FlagQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagQuizViewController.swift; sourceTree = "<group>"; };
 		AF0891D0242F4A3000318B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF0891D2242F4A3100318B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0891D5242F4A3100318B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0891D7242F4A3100318B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF1EEFDF245176DB00C70992 /* StorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 		AF1EEFE12451770800C70992 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AF264087243093F60031F1AC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		AF264089243094040031F1AC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewCell.swift; sourceTree = "<group>"; };
-		AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		AF264087243093F60031F1AC /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlagQuiz.swift; sourceTree = "<group>"; };
-		AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTimeQuizViewController.swift; sourceTree = "<group>"; };
 		AFB3043B2445F32000FAD5C0 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		AFE1BD59243E095400168AF2 /* countriesDict.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countriesDict.json; sourceTree = "<group>"; };
 		AFE1BD5B243E0B6700168AF2 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -77,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				AF8CEE022456C30D00B630A5 /* SettingsFlagQuiz.swift */,
-				AF8CEE042456C7A300B630A5 /* SettingsTimeQuizViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -118,11 +107,9 @@
 		AF17057C243E085A00D0F174 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFE1BD6A243E0BF600168AF2 /* StartVC */,
 				AFE1BD6B243E0C1500168AF2 /* QuizVC */,
 				AFE1BD6C243E0C2900168AF2 /* TimeQuizVC */,
 				AF017AE72463EBC500660C3D /* Settings */,
-				AFE1BD6D243E0C3900168AF2 /* CountriesVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,18 +138,10 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		AFE1BD6A243E0BF600168AF2 /* StartVC */ = {
-			isa = PBXGroup;
-			children = (
-				AF0891CB242F4A3000318B9A /* FirstViewController.swift */,
-			);
-			path = StartVC;
-			sourceTree = "<group>";
-		};
 		AFE1BD6B243E0C1500168AF2 /* QuizVC */ = {
 			isa = PBXGroup;
 			children = (
-				AF0891CD242F4A3000318B9A /* SecondViewController.swift */,
+				AF0891CD242F4A3000318B9A /* FlagQuizViewController.swift */,
 			);
 			path = QuizVC;
 			sourceTree = "<group>";
@@ -170,19 +149,9 @@
 		AFE1BD6C243E0C2900168AF2 /* TimeQuizVC */ = {
 			isa = PBXGroup;
 			children = (
-				AF264087243093F60031F1AC /* ThirdViewController.swift */,
+				AF264087243093F60031F1AC /* TimeViewController.swift */,
 			);
 			path = TimeQuizVC;
-			sourceTree = "<group>";
-		};
-		AFE1BD6D243E0C3900168AF2 /* CountriesVC */ = {
-			isa = PBXGroup;
-			children = (
-				AF264089243094040031F1AC /* FourthViewController.swift */,
-				AF3FE5EE24498E2A00B56334 /* CountriesCollectionViewCell.swift */,
-				AF3FE5EF24498E2A00B56334 /* CountriesCollectionViewCell.xib */,
-			);
-			path = CountriesVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE1BD71243E0F2B00168AF2 /* Countries in Resources */,
-				AF3FE5F124498E2A00B56334 /* CountriesCollectionViewCell.xib in Resources */,
 				AF0891D6242F4A3100318B9A /* LaunchScreen.storyboard in Resources */,
 				AF0891D3242F4A3100318B9A /* Assets.xcassets in Resources */,
 				AFE1BD5A243E095400168AF2 /* countriesDict.json in Resources */,
@@ -261,18 +229,14 @@
 			files = (
 				AFE1BD5C243E0B6700168AF2 /* Country.swift in Sources */,
 				AFE1BD69243E0BD400168AF2 /* UILabel.swift in Sources */,
-				AF26408A243094040031F1AC /* FourthViewController.swift in Sources */,
 				AFE1BD63243E0BC200168AF2 /* Formatter.swift in Sources */,
-				AF0891CE242F4A3000318B9A /* SecondViewController.swift in Sources */,
-				AF8CEE052456C7A300B630A5 /* SettingsTimeQuizViewController.swift in Sources */,
+				AF0891CE242F4A3000318B9A /* FlagQuizViewController.swift in Sources */,
 				AF8CEE032456C30D00B630A5 /* SettingsFlagQuiz.swift in Sources */,
-				AF0891CC242F4A3000318B9A /* FirstViewController.swift in Sources */,
-				AF264088243093F60031F1AC /* ThirdViewController.swift in Sources */,
+				AF264088243093F60031F1AC /* TimeViewController.swift in Sources */,
 				AF0891C8242F4A3000318B9A /* AppDelegate.swift in Sources */,
 				AFE1BD60243E0B7600168AF2 /* SwiftyJSON.swift in Sources */,
 				AFB3043C2445F32000FAD5C0 /* Views.swift in Sources */,
 				AFE1BD65243E0BC800168AF2 /* UIButton.swift in Sources */,
-				AF3FE5F024498E2A00B56334 /* CountriesCollectionViewCell.swift in Sources */,
 				AFE1BD5E243E0B6D00168AF2 /* GetFlags.swift in Sources */,
 				AF0891CA242F4A3000318B9A /* SceneDelegate.swift in Sources */,
 				AF1EEFE0245176DB00C70992 /* StorageController.swift in Sources */,

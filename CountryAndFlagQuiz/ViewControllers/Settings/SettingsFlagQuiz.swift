@@ -37,7 +37,7 @@ class SettingsFlagViewController: UIViewController {
     
     func config() {
         let user = StorageController.shared.fetchUser()
-        sliderA.tintColor = UIColor(named: "Whiteish")
+        sliderA.tintColor = UIColor(named: "GreyOne")
         sliderA.thumbTintColor = UIColor(named: "Blueish")
 
         sliderA.setValue(Float(user?.flagCount ?? 100), animated: true)
@@ -46,7 +46,7 @@ class SettingsFlagViewController: UIViewController {
         scoreFlag = user?.pointsFlagQuiz ?? 0
         highscoreFlag.text = "Highscore for FlagQuiz: \(scoreFlag)"
         
-        sliderB.tintColor = UIColor(named: "Whiteish")
+        sliderB.tintColor = UIColor(named: "GreyOne")
         sliderB.thumbTintColor = UIColor(named: "Blueish")
 
         sliderB.setValue(Float(user?.timeCount ?? 30), animated: true)
